@@ -35,32 +35,52 @@
 
     <!--inicio seccion de resumenes-->
     <div class="container">
-        <div class="accordion accordion-flush" id="panelAcordion">
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="panelEncabezadoUno">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapsoUno" aria-expanded="false" aria-controls="panelColapsoUno">
-                        Titulo 1
-                    </button>
-                </h2>
-                <div class="accordion-collapse collapse" id="panelColapsoUno" aria-labelledby="panelEncabezadoUno" data-bs-parent="#panelAcordion">
-                    <div class="accordion-body">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure tempora magnam illo mollitia voluptate, optio magni neque perferendis cupiditate quam ipsa eos praesentium voluptates id ad aperiam architecto, beatae sint.</p>
+        <div>
+            <h3>Capitulo 1: introducción a git </h3>
+                <div class="accordion accordion-flush" id="panelAcordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelEncabezadoUno">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapsoUno" aria-expanded="false" aria-controls="panelColapsoUno">
+                                ¿Por qué usar un sistema de versiones?
+                            </button>
+                        </h2>
+                        <div class="accordion-collapse collapse" id="panelColapsoUno" aria-labelledby="panelEncabezadoUno" data-bs-parent="#panelAcordion">
+                            <div class="accordion-body">
+                                <p>Un sistema de control de versiones como Git nos ayuda a guardar el historial de cambios y crecimiento de los archivos de nuestro proyecto.</p>
+                                <p>En realidad, los cambios y diferencias entre las versiones de nuestros proyectos pueden tener similitudes, algunas veces los cambios pueden ser solo una palabra o una parte específica de un archivo específico. Git está optimizado para guardar todos estos cambios de forma atómica e incremental, o sea, aplicando cambios sobre los últimos cambios, estos sobre los cambios anteriores y así hasta el inicio de nuestro proyecto.</p>
+                                <p>El comando para iniciar nuestro repositorio, o sea, indicarle a Git que queremos usar su sistema de control de versiones en nuestro proyecto, es git init.</p>
+                                <p>El comando para que nuestro repositorio sepa de la existencia de un archivo o sus últimos cambios es git add. Este comando no almacena las actualizaciones de forma definitiva, solo las guarda en algo que conocemos como “Staging Area”.</p>
+                                <p>El comando para almacenar definitivamente todos los cambios que por ahora viven en el staging area es git commit. También podemos guardar un mensaje para recordar muy bien qué cambios hicimos en este commit con el argumento -m "Mensaje del commit".</p>
+                                <p>Por último, si queremos mandar nuestros commits a un servidor remoto, un lugar donde todos podamos conectar nuestros proyectos, usamos el comando git push.</p>
+                                <br>
+                                <p>Algunos de comandos que veremos más adelante son: </p>
+                                <ul>
+                                    <li>git init –> inicializa el repositorio de git</li>
+                                    <li>git add . –> Agrega todos los cambios en todos los archivos al área de staging</li>
+                                    <li>git status –> Para ver el estado de la BD sí se han hecho cambios, pero no se han agregado, ahí saldrá</li>
+                                    <li>git show -> Muestra todos los cambios históricos hechos y sus detalles (que cambió, cuándo y quién los hizo)</li>
+                                    <li>git commit -m -> Agrega definitivamente los cambios hechos al repositorio, se puede poner un comentario para indicar que cambió</li>
+                                    <li>git push -> envía los cambios al repositorio remoto</li>
+                                    <li>git pull -> Agrega los cambios del commit más nuevo al repositorio local</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="panelEncabezadoDos">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapsoDos" aria-expanded="false" aria-controls="panelColapsoUno">
-                        Titulo 1
-                    </button>
-                </h2>
-                <div class="accordion-collapse collapse" id="panelColapsoDos" aria-labelledby="panelEncabezadoDos" data-bs-parent="#panelAcordion">
-                    <div class="accordion-body">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure tempora magnam illo mollitia voluptate, optio magni neque perferendis cupiditate quam ipsa eos praesentium voluptates id ad aperiam architecto, beatae sint.</p>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelEncabezadoDos">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapsoDos" aria-expanded="false" aria-controls="panelColapsoUno">
+                                Titulo 1
+                            </button>
+                        </h2>
+                        <div class="accordion-collapse collapse" id="panelColapsoDos" aria-labelledby="panelEncabezadoDos" data-bs-parent="#panelAcordion">
+                            <div class="accordion-body">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure tempora magnam illo mollitia voluptate, optio magni neque perferendis cupiditate quam ipsa eos praesentium voluptates id ad aperiam architecto, beatae sint.</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
+                </div>            
         </div>
+
     </div>
     <!--cierre seccion de resumenes-->
 
