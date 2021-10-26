@@ -118,14 +118,39 @@
                         </div>
                     </div>
                     <div class="accordion-item">
-                        <h2 class="accordion-header" id="panelEncabezado00">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso00" aria-expanded="false" aria-controls="panelColapso00">
-                                Titulo 1
+                        <h2 class="accordion-header" id="panelEncabezado5">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso5" aria-expanded="false" aria-controls="panelColapso5">
+                                Introducción a la línea de comandos
                             </button>
                         </h2>
-                        <div class="accordion-collapse collapse" id="panelColapso00" aria-labelledby="panelEncabezado00" data-bs-parent="#panelAcordion">
+                        <div class="accordion-collapse collapse" id="panelColapso5" aria-labelledby="panelEncabezado5" data-bs-parent="#panelAcordion">
                             <div class="accordion-body">
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure tempora magnam illo mollitia voluptate, optio magni neque perferendis cupiditate quam ipsa eos praesentium voluptates id ad aperiam architecto, beatae sint.</p>
+                                <p>Diferencias entre la estructura de archivos de Windows o Linux:</p>
+                                <ul>
+                                    <li>La ruta principal en Windows es C:\, mientras que en Linux (UNIX) es solo /.</li>
+                                    <li>Windows no hace diferencia entre mayúsculas y minúsculas pero Linux (UNIX) sí.</li>
+                                    <li>GitBash en Windows usa la ruta /c/ para dirigirse a C:\ . Por lo tanto, la ruta del usuario con el que estás trabajando es /c/Users/Nombre de tu usuario</li>
+                                </ul>
+                                <br>
+                                <p>Comandos básicos en la terminal:</p>
+                                <ul>
+                                    <li><span class="consola">pwd</span> Nos muestra la ruta de carpetas en la que te encuentras ahora mismo.</li>
+                                    <li><span class="consola">mkdir</span> Nos permite crear carpetas (por ejemplo, mkdir Carpeta-Ejemplo)</li>
+                                    <li><span class="consola">touch</span>Nos permite crear archivos (por ejemplo, touch archivo.txt).</li>
+                                    <li><span class="consola">rm</span> Nos permite borrar un archivo o carpeta (por ejemplo, rm archivo.txt). Mucho cuidado con este comando, puedes borrar todo tu disco duro.</li>
+                                    <li><span class="consola">cat</span> Ver el contenido de un archivo (por ejemplo, cat nombre-archivo.txt).</li>
+                                    <li><span class="consola">ls</span> Nos permite cambiar ver los archivos de la carpeta donde estamos ahora mismo. Podemos usar uno o más argumentos para ver más información sobre estos archivos (los argumentos pueden ser -- + el nombre del argumento o - + una sola letra o shortcut por cada argumento).</li>
+                                    <li><span class="consola">ls -a</span> Mostrar todos los archivos, incluso los ocultos.</li>
+                                    <li><span class="consola">ls -l</span> Ver todos los archivos como una lista.</li>
+                                    <li><span class="consola">cd</span> Nos permite navegar entre carpetas.</li>
+                                    <li><span class="consola">cd /</span> Ir a la ruta principal.</li>
+                                    <li><span class="consola">cd ~</span> Ir a la ruta de tu usuario.</li>
+                                    <li><span class="consola">cd ..</span> Regresar una carpeta hacia atrás.</li>
+                                    <li><span class="consola">history</span> Ver los últimos comandos que ejecutamos y un número especial con el que podemos repetir su ejecución.</li>
+                                    <li><span class="consola">! + número</span> Ejecutar algún comando con el número que nos muestra el comando history (por ejemplo, !72</li>
+                                    <li><span class="consola">clear</span> Para limpiar la terminal. También podemos usar los atajos de teclado Ctrl + L o Command + L.</li>
+                                </ul>
+                                <p>Todos estos comandos tienen una función de autocompletado, o sea, puedes escribir la primera parte y presionar la tecla TAB para que la terminal nos muestre todas las posibles carpetas o comandos que podemos ejecutar. Si presionas la tecla Arriba puedes ver el último comando que ejecutamos.</p>
                             </div>
                         </div>
                     </div>
