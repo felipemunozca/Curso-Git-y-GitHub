@@ -192,6 +192,36 @@
                             </div>
                         </div>
                     </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelEncabezado8">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso8" aria-expanded="false" aria-controls="panelColapso8">
+                                Staging
+                            </button>
+                        </h2>
+                        <div class="accordion-collapse collapse" id="panelColapso8" aria-labelledby="panelEncabezado8" data-bs-parent="#panelAcordion">
+                            <div class="accordion-body">
+                                <p>Cuando inicias un proyecto con <span class="consola">git init</span>, este comando se encargará de dos cosas: primero, crear una carpeta .git, donde se guardará toda la base de datos con cambios atómicos de nuestro proyecto; y segundo, crear un área que conocemos como Staging, que guardará temporalmente nuestros archivos (cuando ejecutemos un comando especial para eso) y nos permitirá, más adelante, guardar estos cambios en el repositorio (también con un comando especial).</p>
+                                <p>Cuando trabajamos con Git nuestros archivos pueden vivir y moverse entre 4 diferentes estados (cuando trabajamos con repositorios remotos pueden ser más estados, pero lo estudiaremos más adelante):</p>
+                                <ul>
+                                    <li>Archivos Tracked: son los archivos que viven dentro de Git, no tienen cambios pendientes y sus últimas actualizaciones han sido guardadas en el repositorio gracias a los comandos <span class="consola">git add</span> y <span class="consola">git commit</span>.</li>
+                                    <li>Archivos Staged: son archivos en Staging. Viven dentro de Git y hay registro de ellos porque han sido afectados por el comando <span class="consola">git add</span>, aunque no sus últimos cambios. Git ya sabe de la existencia de estos últimos cambios, pero todavía no han sido guardados definitivamente en el repositorio porque FALTA ejecutar el comando <span class="consola">git commit</span>.</li>
+                                    <li>Archivos Unstaged: entiéndelos como archivos “Tracked pero Unstaged”. Son archivos que viven dentro de Git pero no han sido afectados por el comando <span class="consola">git add</span> ni mucho menos por <span class="consola">git commit</span>. Git tiene un registro de estos archivos, pero está desactualizado, sus últimas versiones solo están guardadas en el disco duro.</li>
+                                    <li>Archivos Untracked: son archivos que NO viven dentro de Git, solo en el disco duro. Nunca han sido afectados por <span class="consola">git add,</span> así que Git no tiene registros de su existencia.</li>
+                                </ul>
+                                <p>Comandos para mover archivos entre los estados de Git:</p>
+                                <ul>
+                                    <li><span class="consola">git status</span> nos permite ver el estado de todos nuestros archivos y carpetas.</li>
+                                    <li><span class="consola">git add</span> nos ayuda a mover archivos del Untracked o Unstaged al estado Staged. Podemos usar git nombre-del-archivo-o-carpeta para añadir archivos y carpetas individuales o <span class="consola">git add -A</span> para mover todos los archivos de nuestro proyecto (tanto Untrackeds como unstageds).</li>
+                                    <li><span class="consola">git reset HEAD</span> nos ayuda a sacar archivos del estado Staged para devolverlos a su estado anterior. Si los archivos venían de Unstaged, vuelven allí. Y lo mismo se venían de Untracked.</li>
+                                    <li><span class="consola">git commit</span> nos ayuda a mover archivos de Unstaged a Tracked. Esta es una ocasión especial, los archivos han sido guardados o actualizados en el repositorio. Git nos pedirá que dejemos un mensaje para recordar los cambios que hicimos y podemos usar el argumento -m para escribirlo.</li>
+                                    <li><span class="consola">git rm</span> este comando necesita alguno de los siguientes argumentos para poder ejecutarse correctamente:</li>
+                                    <li><span class="consola">git rm --cached</span> Mueve los archivos que le indiquemos al estado Untracked.</li>
+                                    <li><span class="consola">git rm --force</span> Elimina los archivos de Git y del disco duro</li>
+                                </ul>
+                                <p>Git guarda el registro de la existencia de los archivos, por lo que podremos recuperarlos si es necesario (pero debemos usar comandos más avanzados).</p>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
         </div>
