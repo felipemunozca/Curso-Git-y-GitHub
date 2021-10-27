@@ -158,29 +158,42 @@
                 </div>
                 <br>
             <h3>Capitulo 2: comandos basicos en git </h3>
-            <div class="accordion accordion-flush" id="panelAcordion">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="panelEncabezado6">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso6" aria-expanded="false" aria-controls="panelColapso6">
-                            Crear un repositorio
-                        </button>
-                    </h2>
-                    <div class="accordion-collapse collapse" id="panelColapso6" aria-labelledby="panelEncabezado6" data-bs-parent="#panelAcordion">
-                        <div class="accordion-body">
-                            <p>Si quieres ver los archivos ocultos de una carpeta puedes habilitar la opción de Vista > Mostrar u ocultar > Elementos ocultos (en Windows) o ejecutar el comando <span class="consola">ls -a</span></p>
-                            <p>Le indicaremos a Git que queremos crear un nuevo repositorio para utilizar su sistema de control de versiones. Solo debemos posicionarnos en la carpeta raíz de nuestro proyecto y ejecutar el comando <span class="consola">git init</span>.</p>
-                            <p>Al ejecutar este comando (y de aquí en adelante) vamos a tener una nueva carpeta oculta llamada .git con toda la base de datos con cambios atómicos en nuestro proyecto.</p>
-                            <p>Recuerda que Git está optimizado para trabajar en equipo, por lo tanto, debemos darle un poco de información sobre nosotros. No debemos hacerlo todas las veces que ejecutamos un comando, basta con ejecutar solo una sola vez los siguientes comandos con tu información:</p>
-                            <ul>
-                                <li><span class="consola">git config --global user.email "tu@email.com"</span></li>
-                                <li><span class="consola">git config --global user.name "Tu Nombre"</span></li>
-                            </ul>
+                <div class="accordion accordion-flush" id="panelAcordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelEncabezado6">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso6" aria-expanded="false" aria-controls="panelColapso6">
+                                Crear un repositorio
+                            </button>
+                        </h2>
+                        <div class="accordion-collapse collapse" id="panelColapso6" aria-labelledby="panelEncabezado6" data-bs-parent="#panelAcordion">
+                            <div class="accordion-body">
+                                <p>Si quieres ver los archivos ocultos de una carpeta puedes habilitar la opción de Vista > Mostrar u ocultar > Elementos ocultos (en Windows) o ejecutar el comando <span class="consola">ls -a</span></p>
+                                <p>Le indicaremos a Git que queremos crear un nuevo repositorio para utilizar su sistema de control de versiones. Solo debemos posicionarnos en la carpeta raíz de nuestro proyecto y ejecutar el comando <span class="consola">git init</span>.</p>
+                                <p>Al ejecutar este comando (y de aquí en adelante) vamos a tener una nueva carpeta oculta llamada .git con toda la base de datos con cambios atómicos en nuestro proyecto.</p>
+                                <p>Recuerda que Git está optimizado para trabajar en equipo, por lo tanto, debemos darle un poco de información sobre nosotros. No debemos hacerlo todas las veces que ejecutamos un comando, basta con ejecutar solo una sola vez los siguientes comandos con tu información:</p>
+                                <ul>
+                                    <li><span class="consola">git config --global user.email "tu@email.com"</span></li>
+                                    <li><span class="consola">git config --global user.name "Tu Nombre"</span></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelEncabezado7">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso7" aria-expanded="false" aria-controls="panelColapso7">
+                                Analizar cambios en los archivos
+                            </button>
+                        </h2>
+                        <div class="accordion-collapse collapse" id="panelColapso7" aria-labelledby="panelEncabezado7" data-bs-parent="#panelAcordion">
+                            <div class="accordion-body">
+                                <p>El comando <span class="consola">git show</span> nos muestra los cambios que han existido sobre un archivo y es muy útil para detectar cuándo se produjeron ciertos cambios, qué se rompió y cómo lo podemos solucionar. Pero podemos ser más detallados.</p>
+                                <p>Si queremos ver la diferencia entre una versión y otra, no necesariamente todos los cambios desde la creación del archivo, podemos usar el comando <span class="consola">git diff commitA commitB</span>.</p>
+                                <p>Recuerda que puedes obtener el ID de tus commits con el comando <span class="consola">git log</span>.</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-
-
-            </div>               
         </div>
 
     </div>
