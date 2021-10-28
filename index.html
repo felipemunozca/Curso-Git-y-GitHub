@@ -324,6 +324,31 @@
                             </div>
                         </div>
                     </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelEncabezado16">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso16" aria-expanded="false" aria-controls="panelColapso16">
+                                Fusión de ramas con git merge
+                            </button>
+                        </h2>
+                        <div class="accordion-collapse collapse" id="panelColapso16" aria-labelledby="panelEncabezado16" data-bs-parent="#panelAcordion">
+                            <div class="accordion-body">
+                                <p>El comando <span class="consola">git merge</span> nos permite crear un nuevo commit con la combinación de dos ramas (la rama donde nos encontramos cuando ejecutamos el comando y la rama que indiquemos después del comando).</p>
+                                <p>Crear un nuevo commit en la rama master combinando los cambios de la rama cabecera:</p>
+                                <ul>
+                                    <li><span class="consola">git checkout master</span></li>
+                                    <li><span class="consola">git merge cabecera</span></li>
+                                </ul>
+                                <p>Crear un nuevo commit en la rama cabecera combinando los cambios de cualquier otra rama:</p>
+                                <ul>
+                                    <li><span class="consola">git checkout cabecera</span></li>
+                                    <li><span class="consola">git merge cualquier-otra-rama</span></li>
+                                </ul>
+                                <p>Asombroso, ¿verdad? Es como si Git tuviera super poderes para saber qué cambios queremos conservar de una rama y qué otros de la otra. El problema es que no siempre puede adivinar, sobretodo en algunos casos donde dos ramas tienen actualizaciones diferentes en ciertas líneas en los archivos. Esto lo conocemos como un conflicto y aprenderemos a solucionarlos en la siguiente clase.</p>
+                                <p>Recuerda que al ejecutar el comando git checkout para cambiar de rama o commit puedes perder el trabajo que no hayas guardado. Guarda tus cambios antes de hacer git checkout.</p>
+                            </div>
+                        </div>
+                    </div>
+
 
                 </div>                
         </div>
