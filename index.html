@@ -336,7 +336,22 @@
                             </div>
                         </div>
                     </div>
-
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelEncabezado17">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso17" aria-expanded="false" aria-controls="panelColapso17">
+                                Resolución de conflictos con merge
+                            </button>
+                        </h2>
+                        <div class="accordion-collapse collapse" id="panelColapso17" aria-labelledby="panelEncabezado17" data-bs-parent="#panelAcordion">
+                            <div class="accordion-body">
+                                <p>Git nunca borra nada a menos que nosotros se lo indiquemos. Cuando usamos los comandos <span class="consola">git merge</span> o <span class="consola">git checkout</span> estamos cambiando de rama o creando un nuevo commit, no borrando ramas ni commits (recuerda que puedes borrar commits con <span class="consola">git reset</span> y ramas con <span class="consola">git branch -d</span>).</p>
+                                <p>Git es muy inteligente y puede resolver algunos conflictos automáticamente: cambios, nuevas líneas, entre otros. Pero algunas veces no sabe cómo resolver estas diferencias, por ejemplo, cuando dos ramas diferentes hacen cambios distintos a una misma línea.</p>
+                                <p>Esto lo conocemos como conflicto y lo podemos resolver manualmente, solo debemos hacer el merge, ir a nuestro editor de código y elegir si queremos quedarnos con alguna de estas dos versiones o algo diferente. Algunos editores de código como Visual Studio Code nos ayudan a resolver estos conflictos sin necesidad de borrar o escribir líneas de texto, basta con presionar un botón y guardar el archivo.</p>
+                                <p>Recuerda que siempre debemos crear un nuevo commit para aplicar los cambios del merge. Si Git puede resolver el conflicto hará commit automáticamente. Pero, en caso de no pueda resolverlo, debemos solucionarlo y hacer el commit nosotros mismos.</p>
+                                <p>Los archivos con conflictos por el comando <span class="consola">git merge</span> entran en un nuevo estado que conocemos como Unmerged. Funcionan muy parecido a los archivos en estado Unstaged, algo así como un estado intermedio entre Untracked y Unstaged, solo debemos ejecutar <span class="consola">git add</span> para pasarlos al área de staging y <span class="consola">git commit</span> para aplicar los cambios en el repositorio.</p>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
             <!--cierre seccion capitulo tres-->
