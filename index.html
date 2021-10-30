@@ -376,6 +376,29 @@
                         </div>
                     </div>
                 </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelEncabezado19">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso19" aria-expanded="false" aria-controls="panelColapso019">
+                            Uso de GitHub
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="panelColapso19" aria-labelledby="panelEncabezado19" data-bs-parent="#panelAcordion">
+                        <div class="accordion-body">
+                            <p>GitHub es una plataforma que nos permite guardar repositorios de Git que podemos usar como servidores remotos y ejecutar algunos comandos de forma visual e interactiva (sin necesidad de la consola de comandos).</p>
+                            <p>Luego de crear nuestra cuenta, podemos crear o importar repositorios, crear organizaciones y proyectos de trabajo, descubrir repositorios de otras personas, contribuir a esos proyectos, dar estrellas y muchas otras cosas.</p>
+                            <p>El README.md es el archivo que veremos por defecto al entrar a un repositorio. Es una muy buena práctica configurarlo para describir el proyecto, los requerimientos y las instrucciones que debemos seguir para contribuir correctamente.</p>
+                            <p>Para clonar un repositorio desde GitHub (o cualquier otro servidor remoto) debemos copiar la URL (por ahora, usando HTTPS) y ejecutar el comando <span class="consola">git clone + la URL</span> que acabamos de copiar. Esto descargara la versión de nuestro proyecto que se encuentra en GitHub.</p>
+                            <p>Sin embargo, esto solo funciona para las personas que quieren empezar a contribuir en el proyecto. Si queremos conectar el repositorio de GitHub con nuestro repositorio local, el que creamos con git init, debemos ejecutar las siguientes instrucciones:</p>
+                            <ul>
+                                <li>Primero: Guardar la URL del repositorio de GitHub con el nombre de origin con el comando <span class="consola">git remote add origin URL</span></li>
+                                <li>Segundo: Verificar que la URL se haya guardado correctamente con el comando <span class="consola">git remote</span> o tambien <span class="consola">git remote -v</span></li>
+                                <li>Tercero: Traer la versión del repositorio remoto y hacer merge para crear un commit con los archivos de ambas partes. Podemos usar los comandos <span class="consola">git fetch</span> y <span class="consola">git merge</span> o solo utilizar el comando <span class="consola">git pull origin master --allow-unrelated-histories</span></li>
+                                <li>Por último: ahora sí podemos hacer un push para guardar los cambios de nuestro repositorio local en GitHub: <span class="consola">git push origin master</span>.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
             </div>            
             <!--cierre seccion capitulo tres-->
         </div>
