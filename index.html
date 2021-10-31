@@ -419,6 +419,30 @@
                         </div>
                     </div>
                 </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelEncabezado21">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso21" aria-expanded="false" aria-controls="panelColapso21">
+                            Configura tus llaves SSH en local
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="panelColapso21" aria-labelledby="panelEncabezado21" data-bs-parent="#panelAcordion">
+                        <div class="accordion-body">
+                            <p>Primer paso: Generar tus llaves SSH. Recuerda que es muy buena idea proteger tu llave privada con una contraseña. Escribe el comando: <span class="consola">ssh-keygen -t rsa -b 4096 -C "tu@email.com"</span></p>
+                            <p>Segundo paso: Terminar de configurar nuestro sistema.</p>
+                            <p>En Windows y Linux:</p>
+                            <ul>
+                                <li>Encender el "servidor" de llaves SSH de tu computadora: <span class="consola">eval $(ssh-agent -s)</span></li>
+                                <li>Añadir tu llave SSH a este "servidor": <span class="consola">ssh-add ruta-donde-guardaste-tu-llave-privada</span></li>
+                            </ul>
+                            <p>En Mac:</p>
+                            <li>Encender el "servidor" de llaves SSH de tu computadora: <span class="consola">eval "$(ssh-agent -s)"</span></li>
+                            <li>Si usas una versión de OSX superior a Mac Sierra (v10.12) debes crear o modificar un archivo "config" en la carpeta de tu usuario con el siguiente contenido (ten cuidado con las mayúsculas): <span class="consola">Host * AddKeysToAgent yes
+                            UseKeychain yes
+                            IdentityFile ruta-donde-guardaste-tu-llave-privada</span></li>
+                            <li>Añadir tu llave SSH al "servidor" de llaves SSH de tu omputadora (en caso de error puedes ejecutar este mismo comando pero sin el argumento -K): <span class="consola">ssh-add -K ruta-donde-guardaste-tu-llave-privada</span>.</li>
+                        </div>
+                    </div>
+                </div>
 
             </div>            
             <!--cierre seccion capitulo tres-->
