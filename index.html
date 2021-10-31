@@ -443,6 +443,20 @@
                         </div>
                     </div>
                 </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelEncabezado22">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso22" aria-expanded="false" aria-controls="panelColapso22">
+                            Conexión a GitHub con SSH
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="panelColapso22" aria-labelledby="panelEncabezado22" data-bs-parent="#panelAcordion">
+                        <div class="accordion-body">
+                            <p>Luego de crear nuestras llaves SSH podemos entregarle la llave pública a GitHub para comunicarnos de forma segura y sin necesidad de escribir nuestro usuario y contraseña todo el tiempo.</p>
+                            <p>Para esto debes entrar a la Configuración de Llaves SSH en GitHub, crear una nueva llave con el nombre que le quieras dar y el contenido de la llave pública de tu computador.</p>
+                            <p>Ahora podemos actualizar la URL que guardamos en nuestro repositorio remoto, solo que, en vez de guardar la URL con HTTPS, vamos a usar la URL con SSH: <span class="consola">git remote set-url origin url-ssh-del-repositorio-en-github</span>.</p>
+                        </div>
+                    </div>
+                </div>
 
             </div>            
             <!--cierre seccion capitulo tres-->
