@@ -457,6 +457,26 @@
                         </div>
                     </div>
                 </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelEncabezado23">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso23" aria-expanded="false" aria-controls="panelColapso23">
+                            Tags y versiones en Git y GitHub
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="panelColapso23" aria-labelledby="panelEncabezado23" data-bs-parent="#panelAcordion">
+                        <div class="accordion-body">
+                            <p>Los tags o etiquetas nos permiten asignar versiones a los commits con cambios más importantes o significativos de nuestro proyecto.</p>
+                            <p>Comandos para trabajar con etiquetas:</p>
+                            <ul>
+                                <li>Crear un nuevo tag y asignarlo a un commit: <span class="consola">git tag -a nombre-del-tag id-del-commit</span>.</li>
+                                <li>Borrar un tag en el repositorio local: <span class="consola">git tag -d nombre-del-tag</span>.</li>
+                                <li>Listar los tags de nuestro repositorio local: <span class="consola">git tag o git show-ref --tags</span>.</li>
+                                <li>Publicar un tag en el repositorio remoto: <span class="consola">git push origin --tags</span>.</li>
+                                <li>Borrar un tag del repositorio remoto: <span class="consola">git tag -d nombre-del-tag y git push origin :refs/tags/nombre-del-tag</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
             </div>            
             <!--cierre seccion capitulo tres-->
