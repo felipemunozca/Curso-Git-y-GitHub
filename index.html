@@ -635,7 +635,7 @@
                 <br>
             
             <!--inicio seccion capitulo siete-->
-            <h3>Capitulo 6: Multiples entornos de trabajo en Git</h3>
+            <h3>Capitulo 7: Comandos de Git para casos de emergencia</h3>
             <div class="accordion accordion-flush" id="panelAcordion">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="panelEncabezado39">
@@ -661,6 +661,25 @@
                             <p><span class="consola">git reset --soft HashDelHEAD</span> te mantiene lo que tengas en staging ahí.</p>
                             <p><span class="consola">git reset --hard HashDelHEAD</span> resetea absolutamente todo incluyendo lo que tengas en staging.</p>
                             <p>git reset es una mala práctica, no deberías usarlo en ningún momento; debe ser nuestro último recurso.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelEncabezado41">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso41" aria-expanded="false" aria-controls="panelColapso41">
+                            Buscar en archivos y commits de Git con Grep y log
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="panelColapso41" aria-labelledby="panelEncabezado41" data-bs-parent="#panelAcordion">
+                        <div class="accordion-body">
+                            <p>A medida que nuestro proyecto se hace grande vamos a querer buscar ciertas cosas.</p>
+                            <p>Por ejemplo: ¿cuántas veces en nuestro proyecto utilizamos la palabra color?</p>
+                            <p>Para buscar utilizamos el comando git grep color y nos buscará en todo el proyecto los archivos en donde está la palabra color.</p>
+                            <ul>
+                                <li>Con <span class="consola">git grep -n color</span> nos saldrá un output el cual nos dirá en qué línea está lo que estamos buscando.</li>
+                                <li>Con <span class="consola">git grep -c color</span> nos saldrá un output el cual nos dirá cuántas veces se repite esa palabra y en qué archivo.</li>
+                                <li>Si queremos buscar cuántas veces utilizamos un atributo de HTML lo hacemos con <span class="consola">git grep -c "p>"</span>.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
