@@ -58,9 +58,34 @@
                         </div>
                     </div>
                 </div>
-
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelEncabezado09">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso09" aria-expanded="false" aria-controls="panelColapso09">
+                            Analizar cambios en los archivos
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="panelColapso09" aria-labelledby="panelEncabezado09" data-bs-parent="#panelAcordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <li><span class="consola">git show</span> -> comando que te muestra los cambios que ha tenido el archivo. En rojo aparecerá el texto o código original, y en verde los cambios o texto nuevo. Por ejemplo: <span class="ejemplos">git show historia.txt</span></li>
+                            </ul>
+                            <p>Si intento agregar un commit sin un mensaje, aparecerá una pantalla llamada VIM en donde te SUGIEREN que escribas algo.</p>
+                                <ul>
+                                    <li>Para escribir texto en VIM, debo presionar las teclas ESC + I. El mensaje se escribira en letras amarillas.</li>
+                                    <p class="notas">Si intento escribir un mensaje y luego presiono ENTER más de una vez y luego escribo otra parte del mensaje, la primera línea de texto aparecerá en color amarillo, mientras que las demás estarán en color blanco o gris, esto es una mala práctica, ya que ese texto quedara separado por espacios en blanco y que pueden producir errores de lectura.</p>
+                                    <li>Al terminar, presionar la tecla ESC.</li>
+                                    <li>En la parte de abajo de la pantalla, aparecerá una línea en donde se podrá teclear SHIFT + Z + Z para cerrar la pantalla de VIM.</li>
+                                </ul>
+                            <p>Como comparar los cambios entre un commit y otro </p>
+                                <ul>
+                                    <li><span class="consola">git diff</span> -> comando para comparar los cambios ocurridos entre commit y commit. se debe copiar el codigo con el que se almacena cada commit y luego separarlos con espacio para comparar. Por ejemplo: <span class="ejemplos">git diff 00f119a85ba6858cfb5a6858e6592f8fcade998b 002a003c31eceb2ecd22f19113c969c775d1bdda</span></li>
+                                    <p class="notas">En verde me aparece la versión original.En rojo me muestra los cambios y textos agregados.</p>
+                                </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!--inicio seccion capitulo dos-->
+            <!--cierre seccion capitulo dos-->
         </div>
     </div>
     
