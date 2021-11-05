@@ -3,3 +3,17 @@
     color: #fff;
     padding: 2px 5px 2px 5px;
 }
+
+.titulo {
+    text-align: center;
+}
+
+.ejemplos {
+    background-color: #000;
+    color: yellow;
+    padding: 2px 5px 2px 5px;
+}
+
+.notas {
+    font-style: italic;
+}

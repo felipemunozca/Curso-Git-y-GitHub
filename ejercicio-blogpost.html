@@ -14,7 +14,55 @@
     <title>Mis apuntes del curso</title>
 </head>
 <body>
+    <div class="container">
+        <div class="titulo">
+            <h4>En el curso de Git y GitHub vimos un ejemplo llamado “blogpost”, a continuación, se detallarán los apuntes destacados, así como los comandos necesarios para realizar el taller.</h4>
+            <br>
+        </div>
+        <div>
+            <!--inicio seccion capitulo dos-->
+            <h3>Capitulo 2: Comandos básicos en Git </h3>
+            <div class="accordion accordion-flush" id="panelAcordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelEncabezado08">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso08" aria-expanded="false" aria-controls="panelColapso08">
+                            Crear un repositorio
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="panelColapso08" aria-labelledby="panelEncabezado08" data-bs-parent="#panelAcordion">
+                        <div class="accordion-body">
+                            <p>Para crear un repositorio debes indicar donde estará la carpeta central de tus archivos, por ejemplo, en un sitio web, seria donde está el archivo index.html</p>
+                            <ul>
+                                <li><span class="consola">git-init</span> -> comando para iniciar un repositorio. Debes estar en la ruta de la carpeta que utilizaras. se creará una carpeta oculta llamada .git</li>
+                                <li><span class="consola">code</span> -> si escribes este comando en la terminal, se abrirá de modo automático visual studio code.</li>
+                                <li><span class="consola">git status</span> -> comando para saber cual es el estatus del proyecto. Nos dirá en que rama estamos, los commits realizados y si hay algún archivo que aún no se agrega al proyecto</li>
+                                <li><span class="consola">git add</span> -> comando para agregar un archivo al proyecto. Por ejemplo: <span class="ejemplos">git add historia.txt</span></li>
+                                <li><span class="consola">git rm</span> -> comando para eliminar un archivo del directorio. El archivo no se elimina de la carpeta, sino que se elimina de los archivos disponibles del directorio de GIT. Por ejemplo: <span class="ejemplos">git rm historia.txt</span></li>
+                                <li><span class="consola">git rm --cache</span> -> comando para eliminar un archivo de la memoria ram. Por ejemplo: <span class="ejemplos">git rm --cache historia.txt</span></li>
+                                <li><span class="consola">git commit</span> -> comando que envia los cambios al repositorio. Una mala practica es solo ejecutar este comando si agregar un comentario de que es lo que se esta cambiando. Se debe agregar -m "" y entre las comillas agregar un mensaje. Por ejemplo: <span class="ejemplos">git commit -m "Este es el primer commit de este archivo"</span></li>
+                            </ul>
+                            <p>Si se ejecuta este comando si haber realizado una configuración de GIT, nos aparecerá un error indicando que se deben agregar un nombre de usuario y un correo. Para identificar quien es la persona que esta realizando estos cambios.</p>
+                            <ul>
+                                <li><span class="consola">git config</span> -> comando para ver todas las configuraciones que tiene git.</li>
+                                <li><span class="consola">git config --list</span> -> comando para ver la configuración por defecto de GIT. También podremos ver las configuraciones que le faltan.</li>
+                                <li><span class="consola">git config --global</span> -> comando para cambiar todos los usuarios globales.</li>
+                                <li><span class="consola">git config --global user.name</span> -> comando para cambiar el nombre de la configuración global. El nombre debe ir entre comillas. Por ejemplo: <span class="ejemplos">git config --global user.name "Felipe Munoz"</span></li>
+                                <li><span class="consola">git config --global user.email</span> -> comando para cambiar el correo de la configuración global. El correo debe ir entre comillas. Por ejemplo <span class="ejemplos">git config --global user.name "analista.felipe.m@gmail.com"</span>. <p class="notas">NOTA: para hacer la arroba en gitbash utilizar las teclas ALT GR + Q.</p></li>
+                            </ul>
+                            <p>con esta configuración realizada, ya puedo volver a intentar realizar el primer commit.</p>
+                            <p>Si ejecuto el comando de commit y agrego una descripción y luego intento guardar, me aparecerá un error, ya que SIEMPRE tengo que primero agregar los cambios con el comando git add.</p>
+                            <ul>
+                                <li><span class="consola">git add .</span> -> con el punto al final puedo decirle al sistema que me agregue todos los archivos. Esto se utiliza cuando estoy editando mas de un archivo a la vez.</li>
+                                <li><span class="consola">git log</span> -> comando para ver todo el historial de commit que he escrito. Por ejemplo: <span class="ejemplos">git log historia.txt</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
+            </div>
+            <!--inicio seccion capitulo dos-->
+        </div>
+    </div>
     
     <!--bootstrap 5-->
     <script src="js/bootstrap.bundle.min.js"></script>
