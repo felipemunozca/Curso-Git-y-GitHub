@@ -116,6 +116,43 @@
                         </div>
                     </div>
                 </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelEncabezado12">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso12" aria-expanded="false" aria-controls="panelColapso12">
+                            Volver en el tiempo
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="panelColapso12" aria-labelledby="panelEncabezado12" data-bs-parent="#panelAcordion">
+                        <div class="accordion-body">
+                            <p>En el caso en que se quiera volver en el tiempo de mi proyecto, por ejemplo, volver al commit 2 se utilizó el comando <span class="consola">git log</span> y el nombre del archivo para seleccionar un punto de restauración.</p>
+                            <ul>
+                                <li><span class="consola">git reset</span> -> comando que permite volver a una versión anterior. Por ejemplo: <span class="ejemplos">git reset 00f119a85ba6858cfb5a6858e6592f8fcade998b</span></li>
+                            </ul>
+                            <p>Existen 2 tipos de reset:</p>
+                            <ul>
+                                <li><span class="consola">git reset --hard</span> -> TODO vuelve al estado anterior. Por ejemplo: <span class="ejemplos">git reset 00f119a85ba6858cfb5a6858e6592f8fcade998b --hard</span></li>
+                                <li><span class="consola">git reset --soft</span> -> Volvemos a la versión anterior, pero mantiene todo lo que está en staging, que puede volver a agregarse. Por ejemplo: <span class="ejemplos">git reset 00f119a85ba6858cfb5a6858e6592f8fcade998b --soft</span></li>
+                            </ul>
+                            <p>Si reviso el archivo historia.txt y el comando fue bien escrito, todos los últimos cambios serán eliminados y volverá a la segunda versión del texto.</p>
+                            <p class="linea-separacion"></p>
+                            <p>Aquí comienza a desarrollarse el proyecto del curso: </p>
+                            <ul>
+                                <li>Creo un archivo blogpost.html con un diseño básico.</li>
+                                <li>Ejecuto el comando <span class="consola">git status</span> y reconoce el nuevo archivo html.</li>
+                                <li>Agrego el archivo con el comando <span class="consola">git add .</span></li>
+                                <li>Vuelvo a revisar con <span class="consola">git status</span> y ahora deberia aparecer como agregado (el nombre del archivo en verde)</li>
+                                <li>Creo una carpeta css y un archivo de estilos.css</li>
+                                <li>Agrego estilos y se anexo a la página html.</li>
+                                <li>Con <span class="consola">git diff</span> puedo ver la diferencia que hay entre el staging (lo que está guardado en la ram) y lo que está en el directorio (lo que esta guardado en el disco duro)</li>
+                                <li>Vuelvo a ejecutar <span class="consola">git add .</span> para agregar los nuevos cambios y archivos y estarán todos en staging</li>
+                                <li>Guardo los cambios <span class="ejemplos">commit -am "arranco mi proyecto real con html y css"</span> y los cambios son subidos.</li>
+                                <li>Ejecuto el comando <span class="consola">git log</span> y veo que se agregó el nuevo commit, y que aparecen el primer y segundo commit, pero el resto fueron borrados al hacer un reset hard.</li>
+                                <li>Ejecuto el comando <span class="consola">git log --stat</span> para ver los cambios que se hicieron por archivos expresados en bytes.</li>
+                                <li>Y con el comando <span class="consola">git checkout</span> podre VER como se veia un archivo en cierto commit. Por ejemplo <span class="ejemplos">git checkout 002a003c31eceb2ecd22f19113 blogpost.html</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!--cierre seccion capitulo dos-->
         </div>

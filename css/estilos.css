@@ -30,3 +30,7 @@
         margin-bottom: 5px;
     }
 }
+
+.linea-separacion {
+    border-bottom: 1px solid #377ef0;
+}
