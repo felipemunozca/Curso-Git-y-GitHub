@@ -18,3 +18,15 @@
     font-style: italic;
     margin-bottom: 2px;
 }
+
+.imagen-extra {
+    max-width: 70%;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 660px) {
+    .imagen-extra {
+        max-width: 100%;
+        margin-bottom: 5px;
+    }
+}

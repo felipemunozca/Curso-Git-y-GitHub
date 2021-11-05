@@ -95,7 +95,24 @@
                             <p>Staging -> área creada en memoria ram luego de escribir el comando git init.</p>
                             <p>Carpeta /.git/ -> Carpeta donde se almacena la base de datos del repositorio.</p>
                             <p>Cuando escribes el comando <span class="consola">git add</span> los cambios pasan a vivir dentro del área de staging (estado temporal)</p>
+                            <img class="imagen-extra" src="img/10.png" alt="">
                             <p><span class="consola">checkout</span> -> comando para traer cambios que pudo realizar otra persona en un proyecto compartido. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelEncabezado11">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso11" aria-expanded="false" aria-controls="panelColapso11">
+                            Branch
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="panelColapso11" aria-labelledby="panelEncabezado11" data-bs-parent="#panelAcordion">
+                        <div class="accordion-body">
+                            <p>por defecto, el proyecto comienza en la rama MASTER, donde estaría la versión 1 de lo que queramos hacer.</p>
+                            <p>Con cada commit puedes ir creando tantas versiones como quieras.</p>
+                            <p>puedes crear ramas a partir del commit que quieras. Poe ejemplo: tu proyecto funciona hasta cierto punto, pero quieres probar que tal funcionara con otra librería o plugins, puedes crear una rama para realizar pruebas sin afectar lo que ya funciona bien.</p>
+                            <p>Puede darse el caso en que el proyecto este en una etapa final y te des cuenta que tiene un bug grave que obliga a modificar cosas. Para esto se recomienda crear una nueva rama que es conocida como BUGFIXING o HOTFIX (arreglo en caliente) en donde se realizaran todas las pruebas y una vez corregido el error, se une esta rama a la rama principal MASTER.</p>
+                            <p>merge -> es cuando unes los cambios de una rama con otra. </p>
                         </div>
                     </div>
                 </div>
