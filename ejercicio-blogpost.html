@@ -153,8 +153,43 @@
                         </div>
                     </div>
                 </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelEncabezado13">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso13" aria-expanded="false" aria-controls="panelColapso13">
+                            Git reset VS Git rm
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="panelColapso13" aria-labelledby="panelEncabezado13" data-bs-parent="#panelAcordion">
+                        <div class="accordion-body">
+                            <strong>git rm</strong>
+                            <p>Este comando nos ayuda a eliminar archivos de Git sin eliminar su historial del sistema de versiones. Esto quiere decir que si necesitamos recuperar el archivo solo debemos “viajar en el tiempo” y recuperar el último commit antes de borrar el archivo en cuestión.</p>
+                            <p>Recuerda que <span class="consola">git rm</span> no puede usarse así nomás. Debemos usar uno de los flags para indicarle a Git cómo eliminar los archivos que ya no necesitamos en la última versión del proyecto</p>
+                            <ul>
+                                <li><span class="consola">git rm --cached</span> -> Elimina los archivos de nuestro repositorio local y del área de staging, pero los mantiene en nuestro disco duro. Básicamente le dice a Git que deje de trackear el historial de cambios de estos archivos, por lo que pasaran a un estado untracked.</li>
+                                <li><span class="consola">git rm --force</span> -> Elimina los archivos de Git y del disco duro. Git siempre guarda todo, por lo que podemos acceder al registro de la existencia de los archivos, de modo que podremos recuperarlos si es necesario (pero debemos usar comandos más avanzados).</li>
+                            </ul>
+                            <strong>git reset</strong>
+                            <p>Este comando nos ayuda a volver en el tiempo. Pero no como git checkout que nos deja ir, mirar, pasear y volver. Con git reset volvemos al pasado sin la posibilidad de volver al presente. Borramos la historia y la debemos sobreescribir. No hay vuelta atrás.</p>
+                            <p>Este comando es <strong>MUY PELIGROSO</strong> y debemos usarlo solo en caso de emergencia. Recuerda que debemos usar alguna de estas dos opciones:</p>
+                            <p>Hay dos formas de usar git reset:</p>
+                            <ul>
+                                <li><span class="consola">git reset --soft</span> -> Borramos todo el historial y los registros de Git pero guardamos los cambios que tengamos en Staging, así podemos aplicar las últimas actualizaciones a un nuevo commit.</li>
+                                <li><span class="consola">git reset --hard</span> -> Borra todo. Todo, absolutamente todo. Toda la información de los commits y del área de staging se borra del historial.</li>
+                            </ul>
+                            <p>¡Pero todavía falta algo!</p>
+                            <ul>
+                                <li><span class="consola">git reset HEAD</span> -> Este es el comando para sacar archivos del área de staging. No para borrarlos ni nada de eso, solo para que los últimos cambios de estos archivos no se envíen al último commit, a menos que cambiemos de opinión y los incluyamos de nuevo en staging con git add, por supuesto.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!--cierre seccion capitulo dos-->
+
+            <br>
+
+            <!--inicio seccion capitulo tres-->
+            <!--cierre seccion capitulo tres-->
         </div>
     </div>
     
