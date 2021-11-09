@@ -214,11 +214,47 @@
                         </div>
                     </div>
                 </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelEncabezado15">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso15" aria-expanded="false" aria-controls="panelColapso15">
+                            Introducción a ramas de Git
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="panelColapso15" aria-labelledby="panelEncabezado15" data-bs-parent="#panelAcordion">
+                        <div class="accordion-body">
+                            <p>Al inicio del proyecto se comienza con una rama llamada master la cual se puede ver en la consola con el nombre de la carpeta. <span class="ejemplos">Spri@LAPTOP-630B MINGW64 ~/proyecto1 (master)</span></p>
+                            <p>Las ramas son la forma en la que podemos hacer cambios para probar diferentes opciones, sin que estos afecten la rama principal (master).</p>
+                            <p>Cuando uno crea una rama lo que hace básicamente es una copia del ultimo commit en otro lado.</p>
+                            <p class="linea-separacion"></p>
+                            <p>Volviendo al ejemplo del curso</p>
+                            <ul>
+                                <li>Se comienza por editar el archivo blogpost.html y estilos.css agregando modificaciones al código.</li>
+                                <li>En la terminal se ejecuta el comando <span class="consola">git status</span> y muestra que han ocurrido cambios en los archivos ya nombrados.</li>
+                                <li>Para guardar los cambios también puedo usar el comando <span class="consola">git commit -a</span>. Se abrira un entorno llamado VIM para escribir un mensaje. Se presionan las teclas ESC + I para escribir. Luego ESC SHIFT + Z + Z para guardar y cerrar.</li>
+                                <li>Ejecuto el comando <span class="consola">git log</span> para ver si se guardó el cambio.</li>
+                                <li>Ejecuto el comando <span class="consola">git log --stat</span> puedo leer la información de cuantos kilobytes se agregaron o quitaron, así como la cantidad de atributos de código que se agregaron y quitaron.</li>
+                                <li>una vez que termino de realizar los cambios a la versión más actualizada de la rama master, ejecuto el comando <span class="consola">git show</span> para ver donde está el HEAD. Para este caso está apuntando a master. Por ejemplo: <span class="ejemplos">(HEAD -> master)</span></li>
+                            </ul>
+                            <p class="notas">NOTA: cuando el texto que aparece en pantalla es mas largo que la vista de la terminal y no puedes bajar si no es con la tecla ENTER. Se debe presionar la tecla Q para salir del comando y volver a la linea de consola normal.</p>
+                            <strong>Branch</strong>
+                            <ul>
+                                <li>Para crear una nueva rama, se utiliza el comando <span class="consola">git branch</span> y el nombre de la rama. Por ejemplo: <span class="ejemplos">git branch cabecera</span></li>
+                                <li>si vuelvo a ejecutar el comando <span class="consola">git show</span> ahora aparecerá que el HEAD apunta tanto al master como a la cabecera <span class="ejemplos">(HEAD -> master, cabecera)</span></li>
+                                <li>Para moverme a la otra rama debo utilizar el comando <span class="consola">git checkout</span> y el nombre de la rama. Por ejemplo <span class="ejemplos">git checkout cabecera</span></li>
+                                <li>Ahora en la línea de la terminal aparece que estoy trabajando en la cabecera. <span class="ejemplos">Spri@LAPTOP-630B6 MINGW64 ~/proyecto1 (cabecera)</span></li>
+                                <li>Ahora vuelvo a editar el archivo de blogpost.html agregando un header. Ejecuto nuevamente el comando <span class="consola">git status</span> y aparece que se realizó un cambio en el archivo blogpost.html.</li>
+                                <li>para guardar los cambios ejecuto el comando <span class="ejemplos">git commit -m "estructura inicial de la cabecera"</span></li>
+                                <li>Si ahora utilizo <span class="consola">git log</span> y me mostrara los commit que estaban guardados en la ruta (master) y el HEAD que ahora esta en cabecera.</li>
+                                <li>Y si vuelvo a la rama master con el <span class="ejemplos">comando git checkout</span> master y reviso el archivo blogpost.html el código que había agregado desaparece. Pero si vuelvo a la rama cabecera, el código que agregue, vuelve a aparecer, esa es la magia de git.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!--cierre seccion capitulo tres-->
         </div>
     </div>
-    
+    <br>
     <!--bootstrap 5-->
     <script src="js/bootstrap.bundle.min.js"></script>
     <!--
