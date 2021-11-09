@@ -189,6 +189,32 @@
             <br>
 
             <!--inicio seccion capitulo tres-->
+            <h3>Capitulo 3: Flujo de trabajo básico en Git</h3>
+            <div class="accordion accordion-flush" id="panelAcordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelEncabezado14">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso14" aria-expanded="false" aria-controls="panelColapso14">
+                            Flujo de trabajo básico con un repositorio remoto
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="panelColapso14" aria-labelledby="panelEncabezado14" data-bs-parent="#panelAcordion">
+                        <div class="accordion-body">
+                            <p>Cuando se trabaja en equipo en un mismo proyecto, se debe subir la informacion a un servidor remoto o tambien llamado repositorio remoto. Ejemplos de esto pueden ser: GitHub, GitLab, BitBucket o puede ser tu propio servidor.</p>
+                            <strong>Repositorio remoto</strong>
+                            <p>Cuando se quiere comenzar a trabajar con un servidor remoto, en vez de comenzar el proyecto con el comando <span class="consola">git init</span>, se utiliza el comando <span class="consola">git clone</span> y la url del servidor.
+                            </p>
+                            <ul>
+                                <li>Por ejemplo: <span class="ejemplos">git clone https://github.com/libgit2/libgit2</span>
+                                Lo que hace git clone es hacer una copia de toda la ruta master y crea la base de datos de todos los cambios históricos en mi propio repositorio local.</li>
+                            </ul>
+                            <p>Una vez que realice todos los cambios que eran necesarios, así como las mejoras, debo subir la información al servidor remoto utilizando el comando <span class="consola">git push</span></p>
+                            <p>Si hay mas personas trabajando en el repositorio remoto y están subiendo cambios, puedo traer esas actualizaciones a mi repositorio local utilizando el comando <span class="consola">git fetch</span> (Trae los cambios pero no los copia en mis archivos)</p>
+                            <p>Y para poder copiar los cambios a mis archivos, debo fusionar la última versión de mi trabajo en local con las actualizaciones utilizando el comando <span class="consola">git merge</span>.</p>
+                            <p>Hay una forma más rápida de hacer la actualización y la descarga, estos es con el comando <span class="consola">git pull</span>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!--cierre seccion capitulo tres-->
         </div>
     </div>
