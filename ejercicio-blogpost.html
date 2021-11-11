@@ -273,13 +273,51 @@
                             <p>Al ejecutar <span class="consola">git merge</span> se abrirá la consola VIM en donde debo dejar un mensaje. ESC + I para insertar y luego ESC + SHIFT + Z + Z para guardar.</p>
                             <p>En la consola aparecer un mensaje:
                                 <ul>
-                                    <li>Auto-merging css/estilos.css</li>
-                                    <li>Auto-merging blogpost.html</li>
+                                    <li> > Auto-merging css/estilos.css</li>
+                                    <li> > Auto-merging blogpost.html</li>
                                 </ul>
                             lo que significa que los archivos se estan auto fusionando.</p>
                             <p>Si ejecuto <span class="consola">git log</span>, podre leer los commit tanto de la rama MASTER como los de la rama CABECERA.</p>
                             <p>En el caso de estar trabajando en un proyecto con mas personas y no saber los nombres de sus ramas, puedo ejecutar el comando <span class="consola">git branch</span> y aparecerán todas las ramas disponibles. Aparecerá un signo de asterisco * para indicarme en que rama estoy.</p>
                             <img class="imagen-extra" src="img/16.2.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelEncabezado17">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso17" aria-expanded="false" aria-controls="panelColapso17">
+                            Resolución de conflictos al hacer un merge
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="panelColapso17" aria-labelledby="panelEncabezado17" data-bs-parent="#panelAcordion">
+                        <div class="accordion-body">
+                            <p>Git no borra las ramas al hacer un merge. Si ejecuto checkout y entro a CABECERA, puedo ver el código de los archivos tal cual los tenia.</p>
+                            <p>Ahora realizaremos un ejemplo al revés, traer los cambios de MASTER a CABECERA. Por ejemplo <span class="ejemplos">git merge master</span>.</p>
+                            <p>Se fusionan todos los cambios, hasta el ultimo commit en donde se cambio la fuente. Ahora, por el momento tengo en ambas ramas la misma configuración y el mismo código.</p>
+                            <p>En la rama CABERCERA voy a cambiar el texto del título de blogspot.html y el color en estilos.css a rojo.</p>
+                            <p>Guardo los cambios. Por ejemplo <span class="ejemplos">git commit -am "Modifique la cabecera y el color del texto"</span></p>
+                            <p>De vuelta en la rama MASTER, voy a cambiar el texto del título de blogspot.html por uno nuevo y el color en estilos.css a azul. Además agregare un párrafo más al final de blogspot.</p>
+                            <p>Agrego los cambios a git. Por ejemplo <span class="ejemplos">git commit -am "Agregue suscripcion, cambie la cabecera maestra y puse todo azul"</span></p>
+                            <p>Desde la rama MASTER voy a tratar de fusionarlos con la rama CABECERA. El nuevo párrafo no debería generar ningún problema, pero tanto el título del blog como el color darán errores.</p>
+                            <p>Si ejecuto el merge. En la consola aparecera el siguiente error:
+                                <ul>
+                                    <li> > Auto-merging css/estilos.css</li>
+                                    <li> > CONFLICT (content): Merge conflict in css/estilos.css</li>
+                                    <li> > Auto-merging blogpost.html</li>
+                                    <li> > CONFLICT (content): Merge conflict in blogpost.html</li>
+                                </ul>
+                            Hay un conflicto en estilos.css y en blogpost.html
+                            </p>
+                            <p>Dentro de visual studio también aparecerá el código con error. Los signos de menor que <<< indican donde comienza el conflicto y los signos de mayor que >>> hasta donde llega el conflicto.</p>
+                            <p class="linea-separacion"></p>
+                            <p><strong>Resolver conflictos</strong></p>
+                            <p>En el caso del archivo estilos.css se puede editar de forma manual la propiedad color. Se puede elegir si mantener el color rojo, el color azul, o cambiarlo por un nuevo color. Y luego guardar los cambios desde visual studio.</p>
+                            <p>Si veo el archivo de blogpost.html en Visual Studio CODE tengo la opcion de aceptar el cambio actual (accept current change), aceptar el cambio que viene (accept incoming change) o aceptar ambos cambios (accept both change)</p>
+                            <p>Si ejecuto <span class="consola">git status</span> me dira que ambos archivos fueron modificados y que el merge aun no esta completo.</p>
+                            <p>Como los cambios siguen en la etapa de staging, debo crear un nuevo commit para guardar la información. Por ejemplo <span class="ejemplos">git commit -am "Solucione el conflicto de las ramas al fusionar"</span></p>
+                            <p class="notas">NOTA: SIEMPRE QUE HAGAS CAMBIOS A ARCHIVOS CON ERRORES DE MERGE RECUERDA APRETAR EL BOTÓN DE GUARDAR EN VISUAL STUDIO PARA QUE SEAN AGREGADOS EN EL COMMIT. RECUERDA MANTENER UNA COMUNICACIÓN ESTABLE CON TUS COMPAÑEROS DEL EQUIPO PARA ENTENDER DE FORMA MÁS PRECISA POR QUE SE PRODUCEN ERRORES AL MOMENTO DE UNIR RAMAS Y ASÍ PODER SOLUCIONARLAS EN COMUNIDAD.
+                            </p>
+                            <img class="imagen-extra" src="img/17.jpg">
                         </div>
                     </div>
                 </div>
