@@ -251,6 +251,38 @@
                         </div>
                     </div>
                 </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelEncabezado16">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso16" aria-expanded="false" aria-controls="panelColapso16">
+                            Fusión de ramas con Git merge
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="panelColapso16" aria-labelledby="panelEncabezado16" data-bs-parent="#panelAcordion">
+                        <div class="accordion-body">
+                            <p>En la rama CABECERA voy a realizar cambios al archivo blogpost.html y estilos.css creando un header.</p>
+                            <p>Guardo los en la base de datos de git con los comandos de <span class="consola">git add</span> y luego <span class="consola">git commit</span>.</p>
+                            <p>Ahora si vuelvo a la rama MASTER puedo ver que todo el código que he agregado en el header desaparece, pero aprovechare para agregar contenido nuevo en un párrafo al archivo blogpost.html y cambio la fuente del archivo estilos.css</p>
+                            <p>Guardo los nuevos cambios. Por ejemplo <span class="ejemplos">git commit -am "Agregado el contenido adicional del blog y una mejor tipografía"</span></p>
+                            <p>Ya que tengo el header listo y ademas agregue nueva información, quiero unir todos los cambios en una sola rama, para esto tengo que hacer un merge.</p>
+                            <p class="linea-separacion"></p>
+                            <p><strong>Merge</strong></p>
+                            <p>Para hacer un merge tengo que fijarme en que rama estoy. Si estoy en la rama CABECERA este comando traerá todo lo de la rama MASTER y CABECERA pasara a ser la rama principal.</p>
+                            <p>Y si lo que quiero hacer es traer los cambios de la rama CABECERA a la rama MASTER, debo hacer un checkout y volver a la rama MASTER. Aquí invoco el comando merge y creara un commit nuevo fusionando el ultimo commit de MASTER y el ultimo commit de CABECERA.</p>
+                            <p>Si existe un conflicto entre los archivos, por ejemplo, que dos personas hagan cambios a la misma línea de código (colocarle dos id distintos a la misma variable), no me permitirá hacer el merge hasta que alguien lo arregle.</p>
+                            <p>Una vez que arreglo los conflictos, reviso que estoy en la rama MASTER con <span class="consola">git status</span>, y luego apunto a la rama que quiro unir con merge. Por ejemplo: <span class="ejemplos">git merge cabecera</span></p>
+                            <p>Al ejecutar <span class="consola">git merge</span> se abrirá la consola VIM en donde debo dejar un mensaje. ESC + I para insertar y luego ESC + SHIFT + Z + Z para guardar.</p>
+                            <p>En la consola aparecer un mensaje:
+                                <ul>
+                                    <li>Auto-merging css/estilos.css</li>
+                                    <li>Auto-merging blogpost.html</li>
+                                </ul>
+                            lo que significa que los archivos se estan auto fusionando.</p>
+                            <p>Si ejecuto <span class="consola">git log</span>, podre leer los commit tanto de la rama MASTER como los de la rama CABECERA.</p>
+                            <p>En el caso de estar trabajando en un proyecto con mas personas y no saber los nombres de sus ramas, puedo ejecutar el comando <span class="consola">git branch</span> y aparecerán todas las ramas disponibles. Aparecerá un signo de asterisco * para indicarme en que rama estoy.</p>
+                            <img class="imagen-extra" src="img/16.2.jpg">
+                        </div>
+                    </div>
+                </div>
             </div>
             <!--cierre seccion capitulo tres-->
         </div>
