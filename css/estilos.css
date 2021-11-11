@@ -24,6 +24,16 @@
     margin-bottom: 5px;
 }
 
+.btn-secondary {
+    font-size: 13px;
+    padding: 1px 6px 1px 6px;
+}
+
+.btn-success {
+    font-size: 13px;
+    padding: 1px 6px 1px 6px;
+}
+
 @media (max-width: 660px) {
     .imagen-extra {
         max-width: 100%;
