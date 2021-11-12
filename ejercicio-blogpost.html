@@ -22,14 +22,14 @@
         <div>
             <!--inicio seccion capitulo dos-->
             <h3>Capítulo 2: Comandos básicos en Git </h3>
-            <div class="accordion accordion-flush" id="panelAcordion">
+            <div class="accordion accordion-flush" id="panelAcordion2">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="panelEncabezado08">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso08" aria-expanded="false" aria-controls="panelColapso08">
                             Crear un repositorio
                         </button>
                     </h2>
-                    <div class="accordion-collapse collapse" id="panelColapso08" aria-labelledby="panelEncabezado08" data-bs-parent="#panelAcordion">
+                    <div class="accordion-collapse collapse" id="panelColapso08" aria-labelledby="panelEncabezado08" data-bs-parent="#panelAcordion2">
                         <div class="accordion-body">
                             <p>Para crear un repositorio debes indicar donde estará la carpeta central de tus archivos, por ejemplo, en un sitio web, seria donde está el archivo index.html</p>
                             <ul>
@@ -64,7 +64,7 @@
                             Analizar cambios en los archivos
                         </button>
                     </h2>
-                    <div class="accordion-collapse collapse" id="panelColapso09" aria-labelledby="panelEncabezado09" data-bs-parent="#panelAcordion">
+                    <div class="accordion-collapse collapse" id="panelColapso09" aria-labelledby="panelEncabezado09" data-bs-parent="#panelAcordion2">
                         <div class="accordion-body">
                             <ul>
                                 <li><span class="consola">git show</span> -> comando que te muestra los cambios que ha tenido el archivo. En rojo aparecerá el texto o código original, y en verde los cambios o texto nuevo. Por ejemplo: <span class="ejemplos">git show historia.txt</span></li>
@@ -90,7 +90,7 @@
                            Staging
                         </button>
                     </h2>
-                    <div class="accordion-collapse collapse" id="panelColapso10" aria-labelledby="panelEncabezado10" data-bs-parent="#panelAcordion">
+                    <div class="accordion-collapse collapse" id="panelColapso10" aria-labelledby="panelEncabezado10" data-bs-parent="#panelAcordion2">
                         <div class="accordion-body">
                             <p>Staging -> área creada en memoria ram luego de escribir el comando git init.</p>
                             <p>Carpeta /.git/ -> Carpeta donde se almacena la base de datos del repositorio.</p>
@@ -106,7 +106,7 @@
                             Branch
                         </button>
                     </h2>
-                    <div class="accordion-collapse collapse" id="panelColapso11" aria-labelledby="panelEncabezado11" data-bs-parent="#panelAcordion">
+                    <div class="accordion-collapse collapse" id="panelColapso11" aria-labelledby="panelEncabezado11" data-bs-parent="#panelAcordion2">
                         <div class="accordion-body">
                             <p>por defecto, el proyecto comienza en la rama MASTER, donde estaría la versión 1 de lo que queramos hacer.</p>
                             <p>Con cada commit puedes ir creando tantas versiones como quieras.</p>
@@ -122,7 +122,7 @@
                             Volver en el tiempo
                         </button>
                     </h2>
-                    <div class="accordion-collapse collapse" id="panelColapso12" aria-labelledby="panelEncabezado12" data-bs-parent="#panelAcordion">
+                    <div class="accordion-collapse collapse" id="panelColapso12" aria-labelledby="panelEncabezado12" data-bs-parent="#panelAcordion2">
                         <div class="accordion-body">
                             <p>En el caso en que se quiera volver en el tiempo de mi proyecto, por ejemplo, volver al commit 2 se utilizó el comando <span class="consola">git log</span> y el nombre del archivo para seleccionar un punto de restauración.</p>
                             <ul>
@@ -159,7 +159,7 @@
                             Git reset VS Git rm
                         </button>
                     </h2>
-                    <div class="accordion-collapse collapse" id="panelColapso13" aria-labelledby="panelEncabezado13" data-bs-parent="#panelAcordion">
+                    <div class="accordion-collapse collapse" id="panelColapso13" aria-labelledby="panelEncabezado13" data-bs-parent="#panelAcordion2">
                         <div class="accordion-body">
                             <strong>git rm</strong>
                             <p>Este comando nos ayuda a eliminar archivos de Git sin eliminar su historial del sistema de versiones. Esto quiere decir que si necesitamos recuperar el archivo solo debemos “viajar en el tiempo” y recuperar el último commit antes de borrar el archivo en cuestión.</p>
@@ -190,14 +190,14 @@
 
             <!--inicio seccion capitulo tres-->
             <h3>Capítulo 3: Flujo de trabajo básico en Git</h3>
-            <div class="accordion accordion-flush" id="panelAcordion">
+            <div class="accordion accordion-flush" id="panelAcordion3">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="panelEncabezado14">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso14" aria-expanded="false" aria-controls="panelColapso14">
                             Flujo de trabajo básico con un repositorio remoto
                         </button>
                     </h2>
-                    <div class="accordion-collapse collapse" id="panelColapso14" aria-labelledby="panelEncabezado14" data-bs-parent="#panelAcordion">
+                    <div class="accordion-collapse collapse" id="panelColapso14" aria-labelledby="panelEncabezado14" data-bs-parent="#panelAcordion3">
                         <div class="accordion-body">
                             <p>Cuando se trabaja en equipo en un mismo proyecto, se debe subir la informacion a un servidor remoto o tambien llamado repositorio remoto. Ejemplos de esto pueden ser: GitHub, GitLab, BitBucket o puede ser tu propio servidor.</p>
                             <strong>Repositorio remoto</strong>
@@ -220,7 +220,7 @@
                             Introducción a ramas de Git
                         </button>
                     </h2>
-                    <div class="accordion-collapse collapse" id="panelColapso15" aria-labelledby="panelEncabezado15" data-bs-parent="#panelAcordion">
+                    <div class="accordion-collapse collapse" id="panelColapso15" aria-labelledby="panelEncabezado15" data-bs-parent="#panelAcordion3">
                         <div class="accordion-body">
                             <p>Al inicio del proyecto se comienza con una rama llamada master la cual se puede ver en la consola con el nombre de la carpeta. <span class="ejemplos">Sxxxx@LAPTOP-630B MINGW64 ~/proyecto1 (master)</span></p>
                             <p>Las ramas son la forma en la que podemos hacer cambios para probar diferentes opciones, sin que estos afecten la rama principal (master).</p>
@@ -257,7 +257,7 @@
                             Fusión de ramas con Git merge
                         </button>
                     </h2>
-                    <div class="accordion-collapse collapse" id="panelColapso16" aria-labelledby="panelEncabezado16" data-bs-parent="#panelAcordion">
+                    <div class="accordion-collapse collapse" id="panelColapso16" aria-labelledby="panelEncabezado16" data-bs-parent="#panelAcordion3">
                         <div class="accordion-body">
                             <p>En la rama CABECERA voy a realizar cambios al archivo blogpost.html y estilos.css creando un header.</p>
                             <p>Guardo los en la base de datos de git con los comandos de <span class="consola">git add</span> y luego <span class="consola">git commit</span>.</p>
@@ -289,7 +289,7 @@
                             Resolución de conflictos al hacer un merge
                         </button>
                     </h2>
-                    <div class="accordion-collapse collapse" id="panelColapso17" aria-labelledby="panelEncabezado17" data-bs-parent="#panelAcordion">
+                    <div class="accordion-collapse collapse" id="panelColapso17" aria-labelledby="panelEncabezado17" data-bs-parent="#panelAcordion3">
                         <div class="accordion-body">
                             <p>Git no borra las ramas al hacer un merge. Si ejecuto checkout y entro a CABECERA, puedo ver el código de los archivos tal cual los tenia.</p>
                             <p>Ahora realizaremos un ejemplo al revés, traer los cambios de MASTER a CABECERA. Por ejemplo <span class="ejemplos">git merge master</span>.</p>
@@ -327,14 +327,14 @@
             <br>
             <!--inicio seccion capitulo cuatro-->
             <h3>Capítulo 4: trabajando con repositorios remotos en GitHub</h3>
-            <div class="accordion accordion-flush" id="panelAcordion">
+            <div class="accordion accordion-flush" id="panelAcordion4">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="panelEncabezado19">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso19" aria-expanded="false" aria-controls="panelColapso19">
                             Uso de GitHub
                         </button>
                     </h2>
-                    <div class="accordion-collapse collapse" id="panelColapso19" aria-labelledby="panelEncabezado19" data-bs-parent="#panelAcordion">
+                    <div class="accordion-collapse collapse" id="panelColapso19" aria-labelledby="panelEncabezado19" data-bs-parent="#panelAcordion4">
                         <div class="accordion-body">
                             <p>GitHub es un sitio web que está montado en un súper servidor de git en el que cualquier persona puede clonar su repositorio, o crear un repositorio y compartirlo con otras personas.</p>
                             <p>Se puede utilizar con una ventana grafica sin necesidad de estar trabajando en la consola todo el tiempo.</p>
@@ -403,7 +403,7 @@
                             Cómo funcionan las llaves públicas y privadas
                         </button>
                     </h2>
-                    <div class="accordion-collapse collapse" id="panelColapso20" aria-labelledby="panelEncabezado20" data-bs-parent="#panelAcordion">
+                    <div class="accordion-collapse collapse" id="panelColapso20" aria-labelledby="panelEncabezado20" data-bs-parent="#panelAcordion4">
                         <div class="accordion-body">
                             <p>Las aplicaciones de mensajería instantánea (Whatsapp, Telegram, Messenger) funcionan enviando mensajes entre personas y para evitar que esos mensajes sean leídos por terceros o por los llamados hackers, los mensajes son cifrados.</p>
                             <p>Para proteger el mensaje, se vinculan matemáticamente llaves públicas y llaves privadas.</p>
@@ -425,7 +425,7 @@
                             Configura tus llaves SSH en local
                         </button>
                     </h2>
-                    <div class="accordion-collapse collapse" id="panelColapso21" aria-labelledby="panelEncabezado21" data-bs-parent="#panelAcordion">
+                    <div class="accordion-collapse collapse" id="panelColapso21" aria-labelledby="panelEncabezado21" data-bs-parent="#panelAcordion4">
                         <div class="accordion-body">
                             <p>Cuando me conecte a GitHub mediante HTTPS mi usuario y contraseña se guardaron en mi entorno local. Si me roban mi computador, con algún programa para crackear contraseñas pueden dar con mis credenciales de GitHub. Lo que es un riesgo para la empresa en la que trabajo, ya que pueden acceder a los repositorios de la empresa.</p>
                             <p>Esta es la forma en la que puedes crear un hueco de seguridad en un servidor, por ejemplo, el de un banco, en donde podrías sacar dinero sin que nadie se entere.</p>
@@ -468,7 +468,7 @@
                             Conexión a GitHub con SSH
                         </button>
                     </h2>
-                    <div class="accordion-collapse collapse" id="panelColapso22" aria-labelledby="panelEncabezado22" data-bs-parent="#panelAcordion">
+                    <div class="accordion-collapse collapse" id="panelColapso22" aria-labelledby="panelEncabezado22" data-bs-parent="#panelAcordion4">
                         <div class="accordion-body">
                             <p>Es importante aclarar. Si tengo 3 computadores, debo tener una llave pública y privada distinta por cada equipo.</p>
                             <p>Utilizando Visual Studio, abro la llave id_rsa.pub</p>
@@ -495,6 +495,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
             <!--cierre seccion capitulo cuatro-->
 
