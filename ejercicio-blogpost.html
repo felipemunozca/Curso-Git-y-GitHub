@@ -462,6 +462,39 @@
                         </div>
                     </div>
                 </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelEncabezado22">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso22" aria-expanded="false" aria-controls="panelColapso22">
+                            Conexión a GitHub con SSH
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="panelColapso22" aria-labelledby="panelEncabezado22" data-bs-parent="#panelAcordion">
+                        <div class="accordion-body">
+                            <p>Es importante aclarar. Si tengo 3 computadores, debo tener una llave pública y privada distinta por cada equipo.</p>
+                            <p>Utilizando Visual Studio, abro la llave id_rsa.pub</p>
+                            <p>En el navegador, entro a mi cuenta de GitHub, en el menú superior, en donde sale la fotografía de mi cuenta, presiono para que se despliegue el menú y luego voy al botón <button class="btn btn-secondary">SETTINGS</button>.</p>
+                            <p>Me dirijo hacia donde dice <button class="btn btn-secondary">SSH and GPG keys</button>. Luego presiono el botón <button class="btn btn-secondary">New SSH key</button>.</p>
+                            <p>Escribo un título. Recomendación; escribir un nombre que se asocie a mi computador.</p>
+                            <p>En key pego el código de mi archivo id_rsa.pub . Finalmente presiono el botón <button class="btn btn-secondary">Add SSH Key</button>. Me pedirá mi contraseña de GitHub para continuar. Si todo resulto bien, puedo ver los datos de la llave en la pantalla del navegador.</p>
+                            <p>Ahora volveré a pinchar el menú superior e iré a la sección <button class="btn btn-secondary">Your repository</button>. Luego iré a la página del repositorio del blogpost, presiono el botón <button class="btn btn-success">CODE</button> y en vez de utilizar la conexión mediante HTTPS presiono <button class="btn btn-secondary">SSH</button> para generar la URL.</p>
+                            <p>En la consola de git bash vuelvo a entrar a la carpeta proyecto1. Ejecuto el comando <span class="consola">git remote -v</span> para ver las URL de mi repositorio, fetch y push.</p>
+                            <p class="notas">NOTA: origin ES UN ESTANDAR DE LA INDUSTRIA, YO LE PODRIA COLOCAR EL NOMBRE QUE QUISIERA.</p>
+                            <p class="linea-separacion"></p>
+                            <p><strong>Conexión con SSH</strong></p>
+                            <p>Lo primero que debo hacer es cambiar la url del servidor remoto, en gitbash escribo el siguiente comando: <span class="ejemplos">git remote set-url origin git@github.com:felipemunozca/hyperblog.git</span></p>
+                            <p>Vuelvo a ejecutar el comando <span class="consola">git remote -v</span> y ahora aparece que la conexión se realiza de esta manera:
+                                <ul>
+                                    <li><span class="ejemplos">origin  git@github.com:felipemunozca/hyperblog.git (fetch)</li>
+                                    <li><span class="ejemplos">origin  git@github.com:felipemunozca/hyperblog.git (push)</li>
+                                </ul>
+                            </p>
+                            <p>Lo primero que tengo que hacer es traer la última versión del repositorio con <span class="consola">git pull</span> de GitHub (esto es una buena práctica y evita errores)</p>
+                            <p>Me aparecerá un mensaje preguntando si la autenticidad de mi llave es real y debo responder yes o no. Como no pudo encontrar cambios, vuelvo a realizar el comando esta vez apuntando al directorio main: <span class="ejemplos">git pull origin main</span></p>
+                            <p>Realizo algunos cambios al archivo blogpost.html y lo reviso con <span class="consola">git status</span> para ver si lo reconoce como pendiente. Guardo los cambios con un commit: <span class="ejemplos">git commit -am "Se crea una nueva versión del hyperblog"</span></p>
+                            <p>Ahora si subo los archivos a GitHub con el comando: <span class="ejemplos">git push origin master:main</span>. En el navegador puedo visualizar si los cambios en el archivo blogpost.html se subieron.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!--cierre seccion capitulo cuatro-->
 
