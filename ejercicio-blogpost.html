@@ -495,7 +495,44 @@
                         </div>
                     </div>
                 </div>
-
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelEncabezado23">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso23" aria-expanded="false" aria-controls="panelColapso23">
+                            Tags y versiones en Git y GitHub
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="panelColapso23" aria-labelledby="panelEncabezado23" data-bs-parent="#panelAcordion4">
+                        <div class="accordion-body">
+                            <p>Si queremos saber el historial del proyecto, podemos utilizar el comando <span class="consola">git log</span> para ver todos los commit de mi proyecto hasta ahora.</p>
+                            <p>Además, Podemos utilizar variantes para ver los log.</p>
+                            <p><span class="consola">git log --all</span> -> muestra todo lo que hemos hecho.</p>
+                            <p><span class="consola">git log --graph</span> -> muestra líneas de colores en la parte izquierda donde podre ver cuando dos ramas se han unido mediante merge.</p>
+                            <p><span class="consola">git log --graph --decorate --oneline</span> -> comando para ver toda la historia de una forma mas ordenada y fácil de leer. Hace que los hash o id de cada commit sean más fáciles de leer ya que se acortan mucho, por ejemplo: <span class="ejemplos">31af3fc cambio de maestría</span> o <span class="ejemplos">1a5ac3b cambio de historia por vida</span></p>
+                            <p class="linea-separacion"></p>
+                            <p><strong>Tags</strong></p>
+                            <p>Los tags permiten asignar versiones a los commits con cambios más importantes o significativos de nuestro proyecto.</p>
+                            <p>Lo primero es copiar el id desde <span class="consola">git log --graph --decorate --oneline</span> y luego escribir el siguiente comando, <span class="consola">git tag -a</span> con el nombre de la version, y recordando que es un commit asi que tambien debe llevar un mensaje. Y al final, debo agregar el id que copie. Por ejemplo: <span class="ejemplos">git tag -a v0.1 -m "Resultado de las primeras clases del curso" 45ee9d4</span></p>
+                            <p class="notas">Una buena práctica es colocar la versión del proyecto incluyendo la v y un número que pueda ser correlativo ej: v0.1</p>
+                            <p>Aparentemente no paso nada, pero si ejecuto el comando <span class="consola">git tag</span> veré cuantos tags se han registrado en el proyecto.</p>
+                            <p>Para saber en qué punto fue creado la versión v0.1 puedo ejecutar el comando: <span class="consola">git show-ref --tags</span>. En la respuesta aparecerá el id del commit el cual use como base para crear la versión. Por ejemplo: <span class="ejemplos">d6dd22f35abb8f24d7740ca9fdeb23e9 refs/tags/v0.1</span></p>
+                            <p>Los tags son útiles en GitHub para marcar un punto específico en la historia de nuestro proyecto (para los releases). De esta forma podemos hacer un seguimiento del progreso de nuestro proyecto e identificar los cambios que se han hecho en cada versión de manera más fácil.</p>
+                            <p>Ahora enviamos los tags a GitHub <span class="consola">git push origin --tags</span></p>
+                            <p>En el navegador, en el repositorio del proyecto, si pincho el boton <button class="btn btn-secondary">main</button>, luego voy a la pestaña "Tags" aparecerá v0.1</p>
+                            <p>¿Qué pasa si creamos un tags que no nos gusta?</p>
+                            <ul>
+                                <li>Elegimos cualquier id y ejecutamos el comando: <span class="ejemplos">git tag -a dormido -m "ajsjdjahdj jashdjashdjas ashdjash" 37ae1d1</span></li>
+                                <li>Luego me traigo los archivos que hay en el servidor remoto con pull y subo los cambios con push --tags</li>
+                                <li>Vuelvo a ver el repositorio en el navegador y dentro de main -> tags -> aparece "dormido".</li>
+                                <li>Si lo quiero eliminar, lo puedo hacer desde la interfaz de GitHub, pero lo mejor es aprender a hacerlo desde la consola.</li>
+                                <li>Escribo el comando <span class="consola"></span>git tag para saber los tags que existen.Cuando ya se el que quiero eliminar escribo el siguiente comando: <span class="ejemplos">git tag -d dormido</span></li>
+                                <li>Aparece el siguiente mensaje: Deleted tag 'dormido' (was c3bf090)</li>
+                                <li>Para guardar los cambios primero traigo cualquier cambio del servidor con <span class="consola">git pull origin main</span> y luego actualizo los tags con <span class="consola">git push origin --tags</span></li>
+                                <li>Si voy nuevamente al navegador y reviso los tags del proyecto seguirá apareciendo "dormido", y eso es porque no se borra de forma automática de GitHub ya que puede ser utilizado como un release, es decir, que es asumir que algo está listo, es una versión estable utilizable.</li>
+                                <li>Entonces para eliminarlo de forma completa, vuelvo a la consola de gitbash y escribo el siguiente comando: <span class="ejemplos">git push origin :refs/tags/dormido</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!--cierre seccion capitulo cuatro-->
 
