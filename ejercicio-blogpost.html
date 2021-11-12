@@ -222,7 +222,7 @@
                     </h2>
                     <div class="accordion-collapse collapse" id="panelColapso15" aria-labelledby="panelEncabezado15" data-bs-parent="#panelAcordion">
                         <div class="accordion-body">
-                            <p>Al inicio del proyecto se comienza con una rama llamada master la cual se puede ver en la consola con el nombre de la carpeta. <span class="ejemplos">Spri@LAPTOP-630B MINGW64 ~/proyecto1 (master)</span></p>
+                            <p>Al inicio del proyecto se comienza con una rama llamada master la cual se puede ver en la consola con el nombre de la carpeta. <span class="ejemplos">Sxxxx@LAPTOP-630B MINGW64 ~/proyecto1 (master)</span></p>
                             <p>Las ramas son la forma en la que podemos hacer cambios para probar diferentes opciones, sin que estos afecten la rama principal (master).</p>
                             <p>Cuando uno crea una rama lo que hace básicamente es una copia del ultimo commit en otro lado.</p>
                             <p class="linea-separacion"></p>
@@ -241,7 +241,7 @@
                                 <li>Para crear una nueva rama, se utiliza el comando <span class="consola">git branch</span> y el nombre de la rama. Por ejemplo: <span class="ejemplos">git branch cabecera</span></li>
                                 <li>si vuelvo a ejecutar el comando <span class="consola">git show</span> ahora aparecerá que el HEAD apunta tanto al master como a la cabecera <span class="ejemplos">(HEAD -> master, cabecera)</span></li>
                                 <li>Para moverme a la otra rama debo utilizar el comando <span class="consola">git checkout</span> y el nombre de la rama. Por ejemplo <span class="ejemplos">git checkout cabecera</span></li>
-                                <li>Ahora en la línea de la terminal aparece que estoy trabajando en la cabecera. <span class="ejemplos">Spri@LAPTOP-630B6 MINGW64 ~/proyecto1 (cabecera)</span></li>
+                                <li>Ahora en la línea de la terminal aparece que estoy trabajando en la cabecera. <span class="ejemplos">Sxxxx@LAPTOP-630B6 MINGW64 ~/proyecto1 (cabecera)</span></li>
                                 <li>Ahora vuelvo a editar el archivo de blogpost.html agregando un header. Ejecuto nuevamente el comando <span class="consola">git status</span> y aparece que se realizó un cambio en el archivo blogpost.html.</li>
                                 <li>para guardar los cambios ejecuto el comando <span class="ejemplos">git commit -m "estructura inicial de la cabecera"</span></li>
                                 <li>Si ahora utilizo <span class="consola">git log</span> y me mostrara los commit que estaban guardados en la ruta (master) y el HEAD que ahora esta en cabecera.</li>
@@ -394,6 +394,71 @@
                             <p>Me preguntara si quiero subir este commit a la rama main o si deseo crear una nueva rama con un nuevo nombre.</p>
                             <p>Para terminar, presionar el botón <button class="btn btn-secondary">Commit changes</button></p>
                             <p>Ahora en mi repositorio local no puedo ver los cambios que hice desde la página de GitHub a menos que vuelva a ejecutar el comando para descargar la actualización del codigo: <span class="ejemplos">git pull origin main</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelEncabezado20">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso20" aria-expanded="false" aria-controls="panelColapso20">
+                            Cómo funcionan las llaves públicas y privadas
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="panelColapso20" aria-labelledby="panelEncabezado20" data-bs-parent="#panelAcordion">
+                        <div class="accordion-body">
+                            <p>Las aplicaciones de mensajería instantánea (Whatsapp, Telegram, Messenger) funcionan enviando mensajes entre personas y para evitar que esos mensajes sean leídos por terceros o por los llamados hackers, los mensajes son cifrados.</p>
+                            <p>Para proteger el mensaje, se vinculan matemáticamente llaves públicas y llaves privadas.</p>
+                            <p>¿Y cómo funcionan?</p>
+                            <ul>
+                                <li>Lo que yo cifro con mi llave publica, solo puede abrirlo mi llave privada.</li>
+                                <li>Yo puedo enviar mi llave publica a cualquier persona, incluso publicarla en un blog.</li>
+                                <li>Y con eso cualquier mensaje que me envíen solo podrá ser leído con mi llave privada.</li>
+                                <li>Private Key: Para enviar información. Nunca se debe compartir</li>
+                                <li>Public Key: Para recibir información. Esta se puede compartir</li>
+                            </ul>
+                            <img class="imagen-extra" src="img/20.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelEncabezado21">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso21" aria-expanded="false" aria-controls="panelColapso21">
+                            Configura tus llaves SSH en local
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="panelColapso21" aria-labelledby="panelEncabezado21" data-bs-parent="#panelAcordion">
+                        <div class="accordion-body">
+                            <p>Cuando me conecte a GitHub mediante HTTPS mi usuario y contraseña se guardaron en mi entorno local. Si me roban mi computador, con algún programa para crackear contraseñas pueden dar con mis credenciales de GitHub. Lo que es un riesgo para la empresa en la que trabajo, ya que pueden acceder a los repositorios de la empresa.</p>
+                            <p>Esta es la forma en la que puedes crear un hueco de seguridad en un servidor, por ejemplo, el de un banco, en donde podrías sacar dinero sin que nadie se entere.</p>
+                            <p>Es por ese motivo que debe crear un entorno de seguridad mas fuerte. Se recomienda trabajar con comunicación mediante llaves públicas y privadas.</p>
+                            <p>En mi entorno local (mi propio computador) voy a crear una llave publica y privada. Una vez que estén hechas, las enviare a GitHub y le indicare que "para este repositorio quiero que utilices esta llave publica de mi llave privada". Y eso lo conecto por un protocolo nuevo llamado SSH o Security SHell</p>
+                            <p>Las llaves SSH no son por repositorio o por proyectos, SON POR PERSONAS.</p>
+                            <p>Para hace un poco de memoria, si quiero cambiar la información del nombre de usuario y email con el que se conectara mi máquina, debo posicionar la consola en la carpeta raíz de git: <span class="ejemplos">Sxxxx@LAPTOP-630B MINGW64 ~</span></p>
+                            <p>Luego puedo escribir el comando <span class="consola">git config -l</span> para ver la información de nombre de usuario y email.</p>
+                            <p>Si se diera el caso de comenzar a trabajar en una empresa de desarrollo y me dan un correo corporativo, debo cambiar mi correo personal por el de mi empresa. Eso lo haria de la siguiente forma: <span class="ejemplos">git config --global user.mail "minombre@miempresa.cl"</span>. Ahora podremos crear la llave SSH, recuerda que también lo puedes hacer para tu cuenta personal y no es necesario que sea solo para una cuenta de empresa.
+                            </p>
+                            <p class="linea-separacion"></p>
+                            <p><strong>Crear llaves</strong></p>
+                            <p>Una vez ubicado en el home del directorio de git <span class="ejemplos">Sxxxx@LAPTOP-630B MINGW64 ~</span></p>
+                            <p>se escribe el siguiente comando: <span class="ejemplos">ssh-keygen -t rsa -b 4096 -C "anxxxxxxxxxxxx@xxxxxxxx.com"</span></p>
+                            <ul>
+                                <li>-t -> especifica cual es el algoritmo que voy a utilizar</li>
+                                <li>rsa -> algoritmo más popular debido a su complejidad</li>
+                                <li>-b -> que tan compleja es la llave</li>
+                                <li>4096 -> complejidad de la llave desde una perspectiva matemática</li>
+                                <li>-C -> c mayúscula -> a que correo electrónico va a estar conectada esta llave. Idealmente se debe escribir el mismo correo que se definió en la configuración global.</li>
+                            </ul>
+                            <p>Me preguntara donde guardar la llave. Por recomendación es mejor no cambiar nada y solo presionar ENTER.</p>
+                            <p>Luego me pedirá un passphrase (significa password con espacios). Por lo general se recomienda ingresar una contraseña para mas seguridad. (Para este curso no será necesario así que solo se debe presionar la tecla ENTER)</p>
+                            <p>Si busco en la consola puedo ver el siguiente texto en donde se confirma la creación de la llave:</p>
+                            <ul>
+                                <li> > The key fingerprint is: Sxxxxx:8xxxxxxxxxxxxxxxxxxxxxxx anxxxxxxxxxxxx@xxxxxxxx.com</li>
+                            </ul>
+                            <p>Dentro de mi computador, si voy a la siguiente ruta C:\Users\Spr\.ssh podre ver mi llave privada y pública.</p>
+                            <p>Para poder comenzar a hacer conexiones seguras, lo primero es revisar si mi sistema Windows tiene un programa corriendo que revisa las conexiones ssh. Para esto, dentro de la misma consola de git bash ejecutar el comando: <span class="ejemplos">eval $(ssh-agent -s)</span></p>
+                            <p>Si ejecuto el comando me aparecerá la siguiente respuesta: <span class="ejemplos">Agent pid 1983</span> (El numero puede ser diferente en cada equipo).</p>
+                            <p>Ahora debo agregar la llave al sistema operativo. Para agregar la llave, debo ejecutar el siguiente comando: <span class="ejemplos">ssh-add ~/.ssh/id_rsa</span></p>
+                            <p>Si se ejecuta correctamente veré el siguiente mensaje en la consola: <span class="ejemplos">Identity added: /c/Users/Sxxxx/.ssh/id_rsa (anxxxxxxxxxxxx@xxxxxxxx.com)</span></p>
+                            <p class="notas">NOTA: si utilizo el signo ~ dentro de la consola podre ir directo a mi carpeta home. Además, si escribo el nombre de la carpeta puedo ir directo al repositorio por ejemplo: <span class="ejemplos">~/proyecto1</span> </p>
                         </div>
                     </div>
                 </div>
