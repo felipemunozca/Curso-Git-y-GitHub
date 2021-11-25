@@ -569,6 +569,32 @@
                         </div>
                     </div>
                 </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelEncabezado25">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso25" aria-expanded="false" aria-controls="panelColapso25">
+                            Configurar múltiples colaboradores en un repositorio de GitHub
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="panelColapso25" aria-labelledby="panelEncabezado25" data-bs-parent="#panelAcordion4">
+                        <div class="accordion-body">
+                            <p>Yo puedo buscar un proyecto en GitHub que me interese y "clonarlo" para hacer mis propios cambios, pero eso no significa que yo pueda "Enviar" nueva información a ese repositorio.</p>
+                            <p>En GitHub, busco el proyecto de hyperblog de Freddier, pincho el boton CODE para clonarlo, copiando la URL de HTTPS</p>
+                            <p>En la consola voy a la carpeta donde creare el proyecto. Por ejemplo: <span class="ejemplos">/Users/SprXXXXX/proyecto2</span>, luego escribo el comando clone junto a la url. Por ejemplo <span class="ejemplos">git clone https://github.com/felipemunozca/hyperblog.git</span></p>
+                            <p>Se descargar los archivos a mi git local, pero en ningún momento me pedirá ni usuario ni contraseña. Esto es porque es un repositorio público.</p>
+                            <p>Al ejecutar el comando <span class="consola">git log</span>, podre leer toda la historia del proyecto. Y si ejecuto el comando <span class="consola">git branch</span> me aparecerá que solo se descargó la rama MASTER.</p>
+                            <p>Luego de leer el historial del proyecto, ejecuto el archivo blogpost.html y trato de realizar cambios para subirlos a GitHub ejecutando el comando <span class="ejemplos">git push origin master:main</span></p>
+                            <p>Me pedirá el usuario y contraseña, los escribo. Luego aparece un error indiciando "Permision denied" o Permisos denegados. Si la persona no está agregada al repositorio, no podrá subir cambios.</p>
+                            <p class="linea-separacion"></p>
+                            <p><strong>Permisos de colaboradores en GitHub </strong></p>
+                            <p>Para agregar a un colaborador al proyecto, debo ir al repositorio hyperblog.</p>
+                            <p>En el menu nav debajo del nombre, ir hasta la sección donde dice <button class="btn btn-secondary">Settings</button>. Ir hasta el menú lateral izquierdo y seleccionar <button class="btn btn-secondary">Manage Access</button>.</p>
+                            <p>En la nueva página, presionar el botón <button class="btn btn-success">Add People</button>. En el área de texto escribo el correo de la persona Por ejemplo: "anita@gmail.com". Si el email no aparece como disponible, es porque no está en modo público.</p>
+                            <p class="notas">Si no quiero que mi email sea público para evitar que me mandan correos no deseados, puedo decirle a la persona que me diga su nombre de usuario de su cuenta de GitHub y agregarlo con ese nombre.</p>
+                            <p>Escribo el nombre "AnitaPlatzi" y luego presiono el botón <button class="btn btn-secondary">Add to this repository</button>. Ahora AnitaPlatzi debe aceptar la invitación a participar. Si lo hace podrá subir cambios nuevos al proyecto utilizando push.</p>
+                            <p class="notas">Nota: cuando me invitan a trabajar en un proyecto, lo recomendado es hacerlo en una rama nueva, crear todos los cambios que se me pidan o que considere necesarios, luego los subo y le doy aviso a la persona a cargo para que los revise y vea si realmente sirven. Si es así en ese momento se crea un merge con la rama main, antes NO SE TOCA la rama main.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!--cierre seccion capitulo cuatro-->
 
