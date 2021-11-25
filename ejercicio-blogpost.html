@@ -533,6 +533,42 @@
                         </div>
                     </div>
                 </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelEncabezado24">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso24" aria-expanded="false" aria-controls="panelColapso24">
+                            Manejo de ramas en GitHub
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="panelColapso24" aria-labelledby="panelEncabezado24" data-bs-parent="#panelAcordion4">
+                        <div class="accordion-body">
+                            <p>comenzaremos con un repaso de los comandos importantes de ramas:</p>
+                            <ul>
+                                <li><span class="">checkout</span> -> cambiar de rama. Por ejemplo <span class="ejemplos">git checkout cabecera</span></li>
+                                <li><span class="">branch</span> -> me muestra todas las ramas que existen. Por ejemplo  <span class="consola">git branch</span></li>
+                                <li><span class="">show-branch</span> -> nos muestra cuales son las ramas que existen y cuales han sido su historia. Por ejemplo <span class="consola">git show-branch</span></li>
+                                <li><span class="">show-branch --all</span> -> nos muestra cuales son las ramas que existen y su historia con mucho mas detalles. Por ejemplo <span class="consola">git show-branch --all</span></li>
+                                <li><span class="">gitk</span>-> comando con el que se abrirá un software con el que podemos ver de forma gráfica las ramas, commit, tags (se instala por defecto). <p class="notas">NOTA: para poder seguir escribiendo en la consola, debo cerrar el programa que se abrió antes.</p></li>
+                                <li><span class="">pull</span> -> traemos los cambios de GitHub. Por ejemplo  <span class="ejemplos">git pull origin cabecera</span></li>
+                                <li><span class="">checkout</span> -> para movernos entre las ramas. Por ejemplo <span class="ejemplos">git checkout cabecera</span></li>
+                                <li><span class="">push</span> -> subimos los cambios de la rama en la que estoy a GitHub. Por ejemplo <span class="ejemplos">git push origin cabecera</span></li>
+                            </ul>
+                            <p class="linea-separacion"></p>
+                            <p><strong>Branch (Ramas)</strong></p>
+                            <p>Desde la rama principal, creare dos nuevas ramas; header y footer.</p>
+                            <p>Para comenzar, creare la rama header con el comando: <span class="ejemplos">git branch header</span></p>
+                            <p>Y a continuación creo la rama del footer con el comando: <span class="ejemplos">git branch footer</span></p>
+                            <p>Para revisar si las ramas se crearon, ejecuto el comando <span class="consola">git branch</span> y aparecerán todas las ramas disponibles. (aparecerá el signo * en la rama que me encuentro en este momento)
+                                <ul>
+                                    <li> > * cabecera</li>
+                                    <li> > footer</li>
+                                    <li> > header</li>
+                                    <li> > master</li>
+                                </ul>
+                           </p>
+                            <p>Ahora subiré las nuevas ramas creadas a GitHub, primero con la rama header: <span class="ejemplos">git push origin header</span> y luego la rama footer: <span class="ejemplos">git push origin footer</span></p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!--cierre seccion capitulo cuatro-->
 
