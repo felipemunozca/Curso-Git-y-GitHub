@@ -605,12 +605,51 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="panelEncabezado26">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso26" aria-expanded="false" aria-controls="panelColapso26">
-                            
+                            Haciendo merge de las ramas de desarrollo a la rama master(main)
                         </button>
                     </h2>
                     <div class="accordion-collapse collapse" id="panelColapso26" aria-labelledby="panelEncabezado26" data-bs-parent="#panelAcordion5">
                         <div class="accordion-body">
-                            <p></p>
+                            <p>Para continuar con el ejercicio. Yo me encargare del header y Anita del footer.</p>
+                            <p class="notas">UN DATO IMPORTANTE: las imágenes son archivos binarios, y las buenas practicas dicen que los archivos binarios NO SE DEBEN AGREGAR A REPOSITORIOS. Deben ser ignorados.</p>
+                            <p>En este ejercicio SI lo agregaremos para saber qué es lo que pasa con el repositorio.</p>
+                            <p>Me dirijo a la rama header y agrego la imagen con el comando <span class="ejemplos">git add imagenes/dragon.png</span></p>
+                            <p>Ahora ejecuto el comando <span class="consola">git status</span> y veo que el archivo fue reconocido y agregado. Continuo con un commit para salvar los cambios. Por ejemplo <span class="ejemplos">git commit -am "logo del header"</span></p>
+                            <p>Ahora toca subir estos cambios al repositorio en GitHub. Lo primero es traer cualquier cambio que pueda tener la rama header <span class="ejemplos">git pull origin header</span> Ahora subo los cambios del header junto con la imagen <span class="ejemplos">ej: git push origin header</span></p>
+                            <p>Ahora si voy al navegador, a la página del repositorio hyperblog en el branches -> header debería estar la nueva carpeta y el nuevo archivo.</p>
+                            <p>¿Cuál es el problema de trabajar con imágenes?</p>
+                            <ul>
+                                <li>Cada vez que yo haga cambios, voy a traer más binarios a mi repositorio, lo que lo hará mucho más pesado.</li>
+                                <li>Por ejemplo, si se abre la imagen dragon.png con paint y se le agrega una carita feliz, cuando se guarde ese cambio, con git status podremos ver que se registró un cambio en el peso del archivo. Ahora tocaría crear un commit y volver a subirlo a GitHub.</li>
+                                <li>Algunas veces GitHub tarda en mostrar los cambios que se hicieron en una imagen ya que se guardan en una cache intermedia que puede demorarse en procesar los cambios.</li>
+                            </ul>
+                            <p>Agrego nuevos cambios a los archivos de blogpost.html y estilos.css y los guardo con un nuevo commit <span class="ejemplos">git commit -am "color de fondo, logo nuevo y mejor color de header"</span></p>
+                            <p>Ahora los cambios quedan guardados en mi repositorio local, pero aun no los subo ya que quiero saber cómo va Anita con la rama footer. Anita agrega un footer en el html además de crear sus estilos css y los sube a su propia rama.</p>
+                            <p class="linea-separacion"></p>
+                            <p><strong>Merge de diferentes ramas </strong></p>
+                            <p>Anita me avisa que termino los cambios que le pidieron así que debo descárgalos desde su rama <span class="ejemplos">git pull origin footer</span></p>
+                            <p>Reviso los cambios Y si están correctos, el encargado del proyecto (en este ejemplo yo) determina que tanto el header como el footer están correctos, asi que sedebe hacer un merge de ambos a la rama MAIN</p>
+                            <p>El listado de comandos para realizar la fusión es el siguiente:</p>
+                            <ul>
+                                <li><span class="ejemplos">git checkout master</span></li>
+                                <li><span class="ejemplos">git merge header</span> -> escribir el commit del porque se hace la fusión con el header</li>
+                                <li><span class="ejemplos">git merge footer</span> -> escribir el commit del porque se hace la fusión con el footer</li>
+                                <li><span class="ejemplos">git pull origin main </span></li>
+                                <li><span class="ejemplos">git push origin master:main</span></li>
+                            </ul>
+                            <p class="linea-separacion"></p>
+                            <p><strong>Desafío Freddy</strong></p>
+                            <p>Descargar el proyecto hyperblog desde el perfil freddier, en el archivo blogpost.html agregar mi nombre debajo del ultimo estudiante, guardar los cambios y subirlos para esperar a que hagan el merge.</p>
+                            <p>Comandos utilizados:</p>
+                            <ul>
+                                <li><span class="ejemplos">git checkout master</span></li>
+                                <li><span class="ejemplos">git pull origin header</span></li>
+                                <li><span class="ejemplos">git status</span></li>
+                                <li><span class="ejemplos">git log </span></li>
+                                <li><span class="ejemplos">git merge header )</span> (no me apareció la pantalla para escribir el commit</li>
+                                <li><span class="ejemplos">git pull origin main </span></li>
+                                <li><span class="ejemplos">git push origin master:main</span></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
