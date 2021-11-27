@@ -653,6 +653,24 @@
                         </div>
                     </div>
                 </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelEncabezado27">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso27" aria-expanded="false" aria-controls="panelColapso27">
+                            Flujo de trabajo profesional con Pull requests
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="panelColapso27" aria-labelledby="panelEncabezado27" data-bs-parent="#panelAcordion5">
+                        <div class="accordion-body">
+                            <p>En la clase anterior, realizamos un merge directo a la rama MAIN.</p>
+                            <p>En un entorno profesional normalmente se bloquea la rama MAIN. La idea es que nadie pueda llegar y hacer un merge sin antes revisar el código.</p>
+                            <p>La rama MASTER o MAIN es la que eventualmente se subirá al servidor real, llamado <strong>SERVIDOR DE PRODUCCIÓN</strong> que es el que se abre desde un navegador, por ejemplo: www.versionfinal.com o también es donde se sube nuestra compilación final de una aplicación móvil antes de enviarla appstore o play store.</p>
+                            <p>Cuando tenemos que hacer pruebas, deben ser en un entorno que se parezca al de producción, que sea lo más similar al entorno real posible, sin que afecte a los usuarios. Si mi aplicación está corriendo en un sitio, por ejemplo www.hyperblog.com puedo crear un subdominio como test.hyperblog.com y los archivos son subidos y modificados en un servidor llamado <strong>SERVIDOR DE DESARROLLO</strong> o <strong>SERVIDOR STAGING</strong> .</p>
+                            <p>En un entorno profesional, la forma de trabajar con estos servidores es crear los cambios en una rama asignada, por ejemplo, footer, header, etc. Este código debe ser revisado y es enviado a un entorno conocido como PULL REQUEST. Lo que permite que otros miembros del equipo lo vean y analicen los cambios. Si están de acuerdo, se puede hacer un merge hacia el SERVIDOR STAGING.</p>
+                            <p><strong>PULL REQUEST</strong> es una característica que solo GitHub tiene, no se podrá ejecutar en el repositorio git local de mi máquina.</p>
+                            <p>La persona que en la vida real hace todo esto normalmente, es la líder del equipo o también un perfil de desarrollador más capacitado llamado DEV OPS (administrador del entorno de desarrollo)</p>
+                        </div>
+                    </div>
+                </div>
             </div>            
             <!--cierre seccion capitulo cinco-->
 
