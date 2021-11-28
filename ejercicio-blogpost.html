@@ -672,6 +672,49 @@
                         </div>
                     </div>
                 </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelEncabezado28">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso28" aria-expanded="false" aria-controls="panelColapso28">
+                            Utilizando Pull Requests en GitHub
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="panelColapso28" aria-labelledby="panelEncabezado28" data-bs-parent="#panelAcordion5">
+                        <div class="accordion-body">
+                            <p>imaginemos que encontramos errores ortográficos en los textos del blog. Para hacer una revisión de todos los textos que se ven en la página del blog, lo mejor es crear una nueva rama dedicada a buscar estos errores. Por ejemplo <span class="ejemplos">git branch fix-type</span></p>
+                            <p>Una vez que este en la rama nueva, puedo ir al blogpost.html y corregir el texto. Revisamos los cambios con <span class="consola">git status</span>. Guardamos con los cambios con un commit, por ejemplo: <span class="ejemplos">git commit -am "Tildes y textos nuevos en el blog"</span></p>
+                            <p>Ahora puedo subir los cambios al servidor <span class="ejemplos">git push origin fix-type</span></p>
+                            <p>En la página de GitHub aparecerá un mensaje que nos dice que se detectó una diferencia entre el contenido subido a "fix-type" y la rama "main"</p>
+                            <p class="linea-separacion"></p>
+                            <p><strong>Pull Request en GitHub</strong></p>
+                            <p>Si yo soy el dueño del repositorio, y estoy en la rama master o MAIN, puedo presionar el botón <button class="btn btn-secondary">Pull request</button> del menú superior.</p>
+                            <p>En la nueva página abierta, puedo presionar el botón <button class="btn btn-secondary">New pull request</button>. Aquí voy a poder comparar mi rama principal "base: main" con otra que tenga disponible "compare: fix-type"</p>
+                            <p>Si bajo un poco, podre ver una vista previa en donde aparecerá el código original. En rojo estará el código tenía antes de editarlo y en verde el nuevo código agregado o modificado. Si todo está bien y no es necesario más cambios, subo un poco y presiono el botón <button class="btn btn-secondary">Create pull request</button>.</p>
+                            <p>En la pantalla del pull request podre escribir un mensaje explicando porque se está haciendo este merge.</p>
+                            <p class="notas">NOTA: puedo ahorrarme todos estos pasos anteriores, en la página principal de mi repositorio hyperblog, aparecerá un mensaje indicando que en una nueva rama "fix-type" se detectaron cambios que no están en MAIN. Así que se puede presionar el botón "Compare & pull request" para llegar directo a escribir el commit.</p>
+                            <p>Otra ventaja de GitHub es que puedo agregar personas para que revisen este “pull request”, esto se hace al ir al menú a mano derecha en la sección "Reviewers"</p>
+                            <p>Para finalizar, presiono el boton <button class="btn btn-secondary">Create pull request</button>.</p>
+                            <p class="linea-separacion"></p>
+                            <p>Ahora pensando en la perspectiva de la persona que agregue como encargada de revisar el request, una vez que entre a GitHub, le aparecerá un indicador en la sección “pull request”. Al entrar podrá leer el nombre con el que fue guardado y luego los detalles que fueron descritos como mensaje. .</p>
+                            <p>Puede ver los commit disponibles, pudiendo ser 1 o muchos, dependiendo de qué tantas cosas se corrigieron. En la sección "File changed" la persona vera los cambios en el código, lo que quedo igual en blanco, lo corregido en rojo y lo nuevo en verde.</p>
+                            <p>Ahora la persona tiene 3 opciones, Si presiona el botón <button class="btn btn-secondary">review changes</button> podrá elegir entre:</p>
+                            <ul>
+                                <li>comentar</li>
+                                <li>aprobar</li>
+                                <li>pedir cambios</li>
+                            </ul>
+                            <p>Para este ejercicio, la persona rechazo nuestros cambios, así que dejara un mensaje con la respuesta, seleccionara "request changes" y presionara el boton <button class="btn btn-secondary">submit review</button>.</p>
+                            <p class="linea-separacion"></p>
+                            <p>Ahora en mi perfil, tendré una notificación que la persona que reviso mi pull request me está pidiendo cambios. Así que en mi entorno local, descargo la rama con push, realizo los cambios en el archivo y los vuelvo a subir con pull.</p>
+                            <p>De vuelta en GitHub, ahora debería aparecer un botón que dice <button class="btn btn-secondary">View #1</button> con el cual puedo ver nuevamente los cambios en "File changes". Le dejo un mensaje a la persona para que vea que los cambios ya fueron subidos, para que apruebe el merge.</p>
+                            <p class="linea-separacion"></p>
+                            <p>La otra persona revisa los cambios y ahora todo está bien, entonces podrá dejar un mensaje, seleccionar "Approve" y pinchar el botón <button class="btn btn-secondary">Submit review</button>.</p>
+                            <p>Que los cambios estén aprobados no significa que el merge se haya ejecutado. Se debe respetar a la persona que esta a cargo del proyecto, por lo general, el es el encargado de realizar los merge.</p>
+                            <p>De vuelta en la "Conversation" del request, se puede ir al boton <button class="btn btn-secondary">Merge pull request</button>. Dejo el commit que viene por defecto o puedo escribir uno mas especifico y con mas detalles. Para terminar presiono el boton <button class="btn btn-secondary">Confirm merge</button>.</p>
+                            <p>Si el merge se ejecuta de forma correcta aparecerá un mensaje indicando "successfully" que todo resulto bien.</p>
+                            <p>Y además tendré un boton <button class="btn btn-secondary">Delete branch</button> con el que puedo eliminar la rama creada para reparar el error y así evitar llenarse de ramas. Esta decisión dependerá de cada equipo de trabajo. Para este ejercicio se eliminará la rama fix-type.</p>
+                        </div>
+                    </div>
+                </div>
             </div>            
             <!--cierre seccion capitulo cinco-->
 
