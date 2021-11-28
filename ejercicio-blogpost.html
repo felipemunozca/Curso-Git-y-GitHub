@@ -716,6 +716,51 @@
                         </div>
                     </div>
                 </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelEncabezado29">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso29" aria-expanded="false" aria-controls="panelColapso29">
+                            Creando un Fork
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="panelColapso29" aria-labelledby="panelEncabezado29" data-bs-parent="#panelAcordion5">
+                        <div class="accordion-body">
+                            <p>Ahora pasaremos nuestro proyecto de hyperblog a un modelo opensource.</p>
+                            <p>Para ello, lo primero es sacar a Anita como parte del grupo de trabajo. En el navegador, ir a mi cuenta de GitHub, y luego al repositorio del proyecto hyperblog. Seleccionar Settings, luego en el menú lateral, seleccionar <button class="btn btn-secondary">Managa Access</button>. Y donde esta el perfil de Anita Platzi, presionar el botón <button class="btn btn-secondary">eliminar</button>.</p>
+                            <p>Ahora Anita no puede hacer nada de forma directa en mi proyecto, puede descargar una copia clonándolo, pero no podrá crear ramas nuevas o subir  nuevos cambios.</p>
+                            <p>Ahora intentaremos clonar un proyecto opensource directo a nuestras cuentas.</p>
+                            <p>En la pantalla principal de GitHub https://github.com/explore puedo buscar el perfil de Freddy Vegas, o directamente con su usuario freddier, ir hasta su repositorio hyperblog y presionar el botón <button class="btn btn-secondary">fork</button> . Ahora tengo una copia de este repositorio en mi cuenta personal.</p>
+                            <p><strong>FORK</strong> -> significa tenedor -> eso significa que puedo crear nuevos caminos en distintas direcciones. Con fork puedo crear una copia de un proyecto publico hasta el mismo minuto en que presiono el botón. Esta es una característica de GitHub.</p>
+                            <p>Ahora que el proyecto se copió en mi cuenta, puedo ver todos los commits que ha tenido, los cambios y los participantes.</p>
+                            <p>Ahora hare mis propios cambios en el hyperblog de Freddy. Lo primero y para evitar confusiones, es crear una nueva carpeta en donde se almacenará este proyecto. Para este ejemplo será Curso-Git-Platzi.</p>
+                            <p>A continuación, en la página de GitHub, ir al proyecto que copie de Freddy, presionar el boton <button class="btn btn-success">CODE</button> y clonar la URL de HTTPS para luego pegarla. En gitbash, una vez que me movi a la ruta de la nueva carpeta que cree, escribo el comando <span class="ejemplos">git clone https://github.com/felipemunozca/hyperblog-1.git</span>. Al ejecutarlo no me pedirá ni usuario ni contraseña, ya que es un proyecto publico.</p>
+                            <p>Ahora en la rama master del proyecto. Realizo cambios directos al archivo blogpost.html. Agrego mi nombre a la lista, luego guardo los cambios, ejecuto el commit y subo los cambios con git push.</p>
+                            <p>En el navegador veo si se subieron los cambios. Ahora puedo crear un PULL REQUEST entre mi proyecto y el de Freddy. Para eso voy a la sección pull request, luego presiono el boton <button class="btn btn-secondary">New pull request</button>.</p>
+                            <p>Ahora debo escoger las dos ramas para saber qué cambio. Puede ser la rama MAIN u otra de las que cree. Luego presiono el botón <button class="btn btn-secondary">Create pull request</button>. Se creará un commit como título y puedo escribir un mensaje para indicar los cambios.</p>
+                            <p class="linea-separacion"></p>
+                            <p>Luego de hacer el pull request, el dueño del repositorio que estoy clonando, recibirá una notificación diciendo que yo (saldrá mi nombre de usuario) realice un fork de su proyecto.</p>
+                            <p>El dueño del repositorio leerá el commit y el mensaje que escribí. Si existiera un conflicto en el código, puede rechazarlo y enviarme un mensaje de vuelta pidiendo que los repare primero. Si todo está bien, el dueño del repositorio podrá aprobar el merge presionando el boton <button class="btn btn-secondary">Merge pull request</button>.</p>
+                            <p>Ahora cada vez que Freddy haga cambios en su proyecto, yo tendré que traerlos hacia mi proyecto con <span class="consola">git push</span> .</p>
+                            <p>Cuando Freddy cree nuevos cambios en su proyecto, lo ideal seria crear una nueva rama que me traiga los cambios del master de freddier. Voy a la página de freddier y copio la URL de su repositorio. En mi gitbash ejecutare un comando para volver a copiar el repositorio, pero esta vez la fuente de datos no estará en origin sino que en upstream (significa fuente de origen, esta palabra es opcional pero es la mas conocida en mundo del desarrollo). El comando quedaria asi <span class="ejemplos">git remote add upstream https://github.com/freddier/hyperblog.git</span></p>
+                            <p>Ahora ejecuta el comando <span class="consola">git remote -v</span> y ahora tengo una nueva fuente de datos para traer la información. En la consola se veria de esta forma:</p>
+                            <ul>
+                                <li> > origin  https://github.com/felipemunozca/hyperblog-1.git (fetch)</li>
+                                <li> > origin  https://github.com/felipemunozca/hyperblog-1.git (push)</li>
+                                <li> > upstream  https://github.com/freddier/hyperblog.git (fetch)</li>
+                                <li> > upstream  https://github.com/freddier/hyperblog.git (push)</li>
+                            </ul>
+                            <p>Por ultimo tengo que hacer un git pull de upstream a la rama master. Escribo el comando <span class="ejemplos">git pull upstream master</span>. (estoy trabajando en mi entorno local, así que se usa la palabras master)</p>
+                            <p>Guardo los cambios con un commit <span class="ejemplos">git commit -am "fusion de origin y upstream"</span> y luego envio todo a mi repositorio original <span class="ejemplos"> git push origin master</span>.</p>
+                            <p class="linea-separacion"></p>
+                            <p><strong>Resumen final</strong></p>
+                            <p>Freddier es el dueño del repositorio original (la rama master).</p>
+                            <p>Anita clono el proyecto y realizo sus cambios. luego los subió y los publico con un pull request para que freddier los viera.</p>
+                            <p>Los cambios fueron aceptados y se fusionaron en la rama principal del proyecto de freddier.</p>
+                            <p>Freddier pudo realizar más cambios a su rama master.</p>
+                            <p>Anita crea un upstream en su repositorio local, esto es una fuente de origen que apunta al repositorio maestro de freddier.</p>
+                            <p>Entonces, cuando estoy en la rama upstream, le digo que me traiga la última versión de freddier, lo que hará es fusionarme esa información con mi rama origin local.</p>
+                        </div>
+                    </div>
+                </div>
             </div>            
             <!--cierre seccion capitulo cinco-->
 
