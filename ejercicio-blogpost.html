@@ -729,7 +729,7 @@
                             <p>Para ello, lo primero es sacar a Anita como parte del grupo de trabajo. En el navegador, ir a mi cuenta de GitHub, y luego al repositorio del proyecto hyperblog. Seleccionar Settings, luego en el menú lateral, seleccionar <button class="btn btn-secondary">Managa Access</button>. Y donde esta el perfil de Anita Platzi, presionar el botón <button class="btn btn-secondary">eliminar</button>.</p>
                             <p>Ahora Anita no puede hacer nada de forma directa en mi proyecto, puede descargar una copia clonándolo, pero no podrá crear ramas nuevas o subir  nuevos cambios.</p>
                             <p>Ahora intentaremos clonar un proyecto opensource directo a nuestras cuentas.</p>
-                            <p>En la pantalla principal de GitHub https://github.com/explore puedo buscar el perfil de Freddy Vegas, o directamente con su usuario freddier, ir hasta su repositorio hyperblog y presionar el botón <button class="btn btn-secondary">fork</button> . Ahora tengo una copia de este repositorio en mi cuenta personal.</p>
+                            <p>En la pantalla principal de GitHub <a href="#">https://github.com/explore</a> puedo buscar el perfil de Freddy Vegas, o directamente con su usuario freddier, ir hasta su repositorio hyperblog y presionar el botón <button class="btn btn-secondary">fork</button> . Ahora tengo una copia de este repositorio en mi cuenta personal.</p>
                             <p><strong>FORK</strong> -> significa tenedor -> eso significa que puedo crear nuevos caminos en distintas direcciones. Con fork puedo crear una copia de un proyecto publico hasta el mismo minuto en que presiono el botón. Esta es una característica de GitHub.</p>
                             <p>Ahora que el proyecto se copió en mi cuenta, puedo ver todos los commits que ha tenido, los cambios y los participantes.</p>
                             <p>Ahora hare mis propios cambios en el hyperblog de Freddy. Lo primero y para evitar confusiones, es crear una nueva carpeta en donde se almacenará este proyecto. Para este ejemplo será Curso-Git-Platzi.</p>
@@ -842,7 +842,40 @@
                             </ul>
                             <p>El archivo readme.md siempre debe estar en la raíz de mi repositorio.</p>
                             <p>Es la forma en que funciona wikipedia.</p>
-                            <p>Se puede crear un archivo readme.md de forma online en https://pandao.github.io/editor.md/en.html donde podre agregarle todos los estilos que quiera, cuando lo tenga listo, copio el código, y en mi proyecto busco el archivo readme.md lo abro con visual studio, pego el código y luego lo subo a git hub con pull, commit, push.</p>
+                            <p>Se puede crear un archivo readme.md de forma online en <a href="#">https://pandao.github.io/editor.md/en.html</a> donde podre agregarle todos los estilos que quiera, cuando lo tenga listo, copio el código, y en mi proyecto busco el archivo readme.md lo abro con visual studio, pego el código y luego lo subo a git hub con pull, commit, push.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelEncabezado34">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso34" aria-expanded="false" aria-controls="panelColapso34">
+                            Tu sitio web público con GitHub Pages
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="panelColapso34" aria-labelledby="panelEncabezado34" data-bs-parent="#panelAcordion5">
+                        <div class="accordion-body">
+                            <p>GitHub tiene un servicio de hosting gratis para subir tus páginas. Lo primero es entrar a la página <a href="#">https://pages.github.com/</a> donde estará el paso a paso de como publicar un proyecto.</p>
+                            <p>paso 1: ir a la página de GitHub <a href="#">https://github.com/new</a> para crear un repositorio nuevo, que sea público, con mi nombre de usuario.</p>
+                            <ul>
+                                <li> -> Owner: felipemunozca</li>
+                                <li> -> Repository name: felipemunozca</li>
+                                <li> -> Description: Ejemplo de un GitHub Page</li>
+                                <li> -> Public</li>
+                                <li> -> Create repository</li>
+                            </ul>
+                            <p>paso 2: ya que el repositorio esta creado, puedo copiar la URL de SSH git@github.com:felipemunozca/felipemunozca.git para conectarme mediante gitbash</p>
+                            <p>paso 3: en gitbash, ir al home de mi maquina y luego navegar hasta llegar a mi carpeta Curso-Git-Platzi. Escribo el comando para clonar mi nuevo repositorio <span class="ejemplos">git clone git@github.com:felipemunozca/felipemunozca.git</span> . Cuando finalice me dirá, que el repositorio esta vacío. Si ejecuto <span class="consola">ls -al</span> veré mis carpetas del proyecto de hyperblog y otra con mi nombre de usuario de GitHub.</p>
+                            <p>paso 4: ahora debo crear un nuevo archivo llamado index.html. Ejecuto el comando <span class="consola">git status</span> y me dira que aún no agrego index.html, para agregarlo debo escribir el comando <span class="ejemplos">git add index.html</span>. Ahora escribo un commit para guardar los cambios, luego un <span class="consola">git pull</span> para traerme cualquir cambio del servidor y finalmente un <span class="consola">git push</span> para subir la información.</p>
+                            <p>paso 5: ahora puedo ir a ver la página que cree en <a href="#">http://felipemunozca.github.io/</a>  es importante que la URL debe comenzar con mi nombre de usuario de GitHub. Si escribo la URL en el navegador e intento entrar, aparece el error 404. Eso es porque aún me falta un último paso.</p>
+                            <p>paso 6: en el sitio de GitHub voy a mis repositorios, y busco uno que tenga mí mismo nombre de usuario. Presiono el botón <button class="btn btn-secondary">settings</button> . Se abrira una nueva página, bajo con la rueda del mouse, hasta una sección que dice "GitHub Pages" y presiono el enlace <a href="">Check it out here!</a>. En la nueva página que se me abre, en la sección "Source", presiono donde dice "None", y cambio la elección por "main", para guardar la selección presiono el botón <button class="btn btn-success">Save</button>. Me aparecerá un mensaje diciendo que se creó mi dominio, el cual sería: <a href="#">https://felipemunozca.github.io/felipemunozca/</a>  . El único problema, es que la URL quedo demasiado larga al repetir el nombre de usuario.</p>
+                            <p>paso 7: para hacer que el index cargue en la raíz hay que cambiar el nombre del repositorio. En el repositorio felipemunozca/felipemunozca ir a <button class="btn btn-secondary">settings</button>. En "repository name" escribo felipemunozca.github.io y presionar "Rename". Ahora bajar de nuevo hasta GitHub Pages y ver si la URL se actualizo a <a href="#">https://felipemunozca.github.io/</a>.</p>
+                            <p class="linea-separacion"></p>
+                            <p><strong>Extra</strong></p>
+                            <p>Podemos hacer lo mismo con el proyecto hyperblog.</p>
+                            <p>Ir al repositorio de hyperblog -> settings -> bajar hasta GitHub Pages -> clickear el enlace -> cambiar el source por main -> save.</p>
+                            <p>Me aparecerá la URL creada https://felipemunozca.github.io/hyperblog/</p>
+                            <p>Si intento ir al enlace me dará un error, porque el proyecto no tiene un archivo index que cargue por defecto, así que manualmente debo agregar a la URL mi archivo blogpost https://felipemunozca.github.io/hyperblog/blogpost.html</p>
+                            <p>Ahora si podre la página y si te fijas la imagen no carga, ya que con gitignore, la imagen nunca fue subida al repositorio.</p>
                         </div>
                     </div>
                 </div>
