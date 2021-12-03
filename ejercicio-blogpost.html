@@ -889,11 +889,28 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="panelEncabezado35">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso35" aria-expanded="false" aria-controls="panelColapso35">
-                            
+                            Git Rebase reorganizando el trabajo realizado
                         </button>
                     </h2>
                     <div class="accordion-collapse collapse" id="panelColapso35" aria-labelledby="panelEncabezado35" data-bs-parent="#panelAcordion6">
                         <div class="accordion-body">
+                            <p><strong>Rebase</strong> toma una rama completa y la pega en la rama master (main).</p>
+                            <p>Esto es una MUY MALA PRACTICA al utilizar repositorios remotos. En forma local si puede ser usado, aunque solo en ciertos casos, debes usar tu criterio para determinar cuándo utilizarlo.</p>
+                            <p>Para continuar con el ejercicio: en gitbash, vuelvo a la carpeta raíz y entro a mi carpeta proyecto1. Abro el archivo historia.txt Agrego el texto "Master 1" y guardo. Reviso si se detectaron los cambios con <span class="consola">git status</span> y luego los guardo con <span class="ejemplos">git commit -am "agrego master 1"</span></p>
+                            <p>Ahora, creare una nueva rama con el comando <span class="ejemplos">git branch experimento</span>. Me cambio a la nueva rama con el comando <span class="ejemplos">git checkout experimento</span></p>
+                            <p>Abro nuevamente el archivo historia.txt y agrego un nuevo texto “experimento 1”y guardo. Reviso con <span class="consola">git status</span> para ver si detecta el cambio y luego guardo los cambios con <span class="ejemplos">git commit -am "Exp 1"</span>.</p>
+                            <p>Vuelvo a abrir el archivo historia.txt y agrego el texto "experimento 2" y guardo. Reviso con <span class="consola">git status</span> para ver si detecta el cambio y luego guardo los cambios con <span class="ejemplos">git commit -am "Exp 2"</span>.</p>
+                            <p>Si voy a la rama master, historia.txt solo tiene el textp "master 1".</p>
+                            <p>Ahora quiero pegar los cambios que hice en la rama experimento a mi rama master.  Estando en la rama experimento, escribo el siguiente comando: <span class="ejemplos">git rebase master</span>.</p>
+                            <p>Vuelvo a la rama master y abrimos historia.txt agregamos el siguiente texto "Master 2" y guardo. Y luego guardo el commit <span class="ejemplos">git commit -am "master 2"</span> .</p>
+                            <p>Si voy a la rama experimento. reviso historia.txt y el texto que agregue no aparece. Pero si ejecuto <span class="ejemplos">git rebase master</span> uniré todo. Ahora historia.txt tiene todos los cambios que he hecho en las distintas ramas. Y si hago un checkout a master, historia.txt no ha agregado los cambios de la rama experimento. Asi que puedo hacer un rebase de la rama experimento para traerme los cambios a master <span class="ejemplos">git rebase experimento</span>.</p>
+                            <p>Ahora que termine de juntar los cambios, puedo borrar la rama experimento con el comando: <span class="ejemplos">git branch -D experimento</span>.</p>
+                            <p> <strong>Finalmente ¿Cuáles son los problemas de rebase?</strong> </p>
+                            <ul>
+                                <li>NO queda historia (commit)</li>
+                                <li>NO se sabe quién hizo que</li>
+                                <li>Si la master ha avanzado mucho, se pueden crear muchos conflictos de código.</li>
+                            </ul>
 
                         </div>
                     </div>
