@@ -5,6 +5,7 @@ body {
 .hoja-en-blanco {
     background-color: #fff;
     border-radius: 3px;
+    margin-top: 30px;
 }
 
 .consola {
