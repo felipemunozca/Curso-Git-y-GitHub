@@ -1049,6 +1049,35 @@
             </div>            
             <!--cierre seccion capitulo siete-->
 
+            <br>
+            <!--inicio seccion capitulo ocho-->
+            <h3>Capítulo 8: Bonus sobre Git y GitHub</h3>
+            <div class="accordion accordion-flush" id="panelAcordion8">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelEncabezado42">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso42" aria-expanded="false" aria-controls="panelColapso42">
+                            Comandos y recursos colaborativos en Git y GitHub
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="panelColapso42" aria-labelledby="panelEncabezado42" data-bs-parent="#panelAcordion8">
+                        <div class="accordion-body">
+                            <p>Algunos comandos que no vimos en el curso pero que te pueden resultar útiles en tu día a día son:git </p>
+                            <p><strong>shortlog:</strong> comando para ver cuantos y cuales commit ha registrado cada miembro del equipo, por ejemplo: <span class="consola">git shortlog</span>. Muestra un log por persona que participo en el proyecto.</p>
+                            <p><strong>shortlog -sn:</strong> comando para saber el número total de commits que cada persona del proyecto ha registrado, por ejemplo <span class="consola">git shortlog -sn</span>. </p>
+                            <p><strong>shortlog --all:</strong> comando para saber el número total de commits que cada persona del proyecto ha registrado, contando los eliminados, por ejemplo <span class="consola">git shortlog --all</span>.</p>
+                            <p><strong>shortlog --all --no-merges:</strong> comando para saber el número total de commits que cada persona del proyecto ha registrado, contando los eliminados, pero sin contar los merge, por ejemplo <span class="consola">git shortlog --all --no-merges</span>.</p>
+                            <p><strong>blame:</strong> muestra quien hizo que en un archivo línea por línea, por ejemplo <span class="ejemplos">git blame blogpost.html</span>.</p>
+                            <p><strong>blame -c:</strong> muestra quien hizo que en un archivo línea por línea, pero de una forma mas ordenada, por ejemplo <span class="ejemplos">git blame -c blogpost.html</span>.</p>
+                            <p><strong>blame -L linea_inicial,linea_final:</strong> Si quiero saber quién edito un archivo de código muy largo pero no necesito ver todas líneas sino que me interesa saber quién edito ciertas líneas que producen conflicto, puede hacer un filtro con blame indicando la línea inicial hasta la línea final que quiero analizar por ejemplo, en el archivo estilos.css entre las líneas 35 a la 53 ejecuto el comando: <span class="ejemplos">git blame css/estilos.css -L35,53</span></p>
+                            <p><strong>branch -r:</strong> se muestran todas las ramas remotas almacenadas en mi cuenta de GitHub, por ejemplo: <span class="consola">git branch -r</span>.</p>
+                            <p><strong>branch -a:</strong> se muestran todas las ramas tanto locales como remotas, solo cambian los colores con el que se ve cada nombre, en blanco las locales, en verde en la que me encuentro y en rojo las remotas, por ejemplo: <span class="consola">git branch -a</span>.</p>
+                            
+                            <p><strong>COMANDO --help:</strong> si escribo el comando y le agrego al final --help, se abrirá una página en el navegador, en donde muestra como funciona el comando, por ejemplo: <span class="consola">git commit --help</span> o <span class="consola">git log --help</span>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            <!--cierre seccion capitulo ocho-->
         </div>
     </div>
     <br>
