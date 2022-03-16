@@ -1007,12 +1007,24 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="panelEncabezado40">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso40" aria-expanded="false" aria-controls="panelColapso40">
-                            
+                            Git Reset y Reflog úsese en caso de emergencia
                         </button>
                     </h2>
                     <div class="accordion-collapse collapse" id="panelColapso40" aria-labelledby="panelEncabezado40" data-bs-parent="#panelAcordion7">
                         <div class="accordion-body">
-
+                            <p>Qué pasa cuando cometes un error grave en tu proyecto. Por ejemplo, borrar el archivo blogpost.html y además después guardas los cambios con un commit</p>
+                            <p>O qué pasa si cometo un error aún más grave, borrando un branch (rama) que estoy utilizando con el comando <span class="ejemplos">git branch -D cabecera</span>. Si reviso <span class="consola">git log --oneline</span> la rama es como si nunca hubiese existido.</p>
+                            <p>Si me sucediera algo así, no todo está perdido, existe la opción de ejecutar el comando <span class="consola">git reflog</span>, en la consola se vera todo, tanto el id (hash) como el HEAD.</p>
+                            <p>Con esas líneas puedo buscar en que commit todo está bien, antes de borrar mis archivos y asi puedo hacer un reset, aunque hay 2 tipos:
+                                <ul>
+                                    <li><strong>reset soft:</strong> te resetea lo que mantengas en staging</li>
+                                    <li><strong>reset hard:</strong> te resetea todo (esta opción es más utilizada en desarrollo)</li>
+                                </ul>
+                            </p>
+                            <p>Si quiero hacer un reset soft, copio el texto HEAD junto al número que aparecerá y podre resetear los cambios con el comando: <span class="ejemplos">git reset HEAD@{1}</span>.</p>
+                            <p>Si lo que quiero es hacer un reset hard, copio el id (hash) y lo pego en el siguiente comando: <span class="ejemplos">git reset --HARD 0a14679</span></p>
+                            <p>Gracias a estos comandos, todo volverá a como estaba antes. Se recuperaron los archivos y ramas.</p>
+                            <p>Aunque se debe mencionar que GIT RESET ES UNA MALA PRACTICA solo se recomienda utilizar cuando ya agotaste todas las otras opciones.</p>
                         </div>
                     </div>
                 </div>
