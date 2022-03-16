@@ -990,12 +990,17 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="panelEncabezado39">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso39" aria-expanded="false" aria-controls="panelColapso39">
-                            
+                            Reconstruir commits en Git con amend
                         </button>
                     </h2>
                     <div class="accordion-collapse collapse" id="panelColapso39" aria-labelledby="panelEncabezado39" data-bs-parent="#panelAcordion7">
                         <div class="accordion-body">
-
+                            <p>Continuando con el ejercicio, edito el archivo blogpost.html cambiando el título y le agrego estilos CSS al footer.</p>
+                            <p>Agrego los cambios con el comando <span class="ejemplos">commit -am "cambio al título y al color del footer"</span>.</p>
+                            <p>Pero, qué pasa si me di cuenta que el color que coloque en el footer no era el correcto y en vez de crear un nuevo commit puedo reparar el que ya existe.</p>
+                            <p>Para eso utilizamos el comando <span class="consola">git commit --amend</span>, amend en inglés es remendar y lo que hará es que los cambios que hicimos nos los agregará al commit anterior.</p>
+                            <p>Para usar esta opción SIEMPRE se debe primero agregar el archivo cambiado <span class="ejemplos">git add css/estilos.css</span> y luego ejecutar <span class="consola">git commit --amend</span></p>
+                            <p>Se abrirá la pantalla de vim y podre cambiar el texto del commit. Finalmente, si ejecuto <span class="consola">git log</span> y veo la lista de commits, podre ver que no se creó ningún nuevo commit.</p>
                         </div>
                     </div>
                 </div>
