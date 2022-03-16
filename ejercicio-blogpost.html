@@ -87,7 +87,7 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="panelEncabezado10">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso10" aria-expanded="false" aria-controls="panelColapso10">
-                           Staging
+                            Staging
                         </button>
                     </h2>
                     <div class="accordion-collapse collapse" id="panelColapso10" aria-labelledby="panelEncabezado10" data-bs-parent="#panelAcordion2">
@@ -912,6 +912,29 @@
                                 <li>Si la master ha avanzado mucho, se pueden crear muchos conflictos de código.</li>
                             </ul>
 
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelEncabezado36">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso36" aria-expanded="false" aria-controls="panelColapso36">
+                            Git Stash Guardar cambios en memoria y recuperarlos después
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="panelColapso36" aria-labelledby="panelEncabezado36" data-bs-parent="#panelAcordion6">
+                        <div class="accordion-body">
+                            <p>Puede darse la situación en la que estoy en una rama (master) y realizo unas modificaciones, pero luego necesito ir a otra rama, y no quiero guardar esos cambios en un commit. Y si no los guardo, no podré ir a la otra rama.</p>
+                            <p>Para eso exite <strong>git stash</strong>.</p>
+                            <p>En blogpost.html realizo un cambio en el footer, guardo y luego ejecuto git status. Si intento ir a la rama footer me saldrá un error, porque no he hecho el commit del cambio de blogpost.</p>
+                            <p>Para solucionar el problema ejecuto el comando <span class="consola">git stash</span></p>
+                            <p>Este cambio TEMPORAL lo puedo ver con el comando <span class="consola">git stash list</span></p>
+                            <p>Ahora puedo ir a la rama git checkout footer. Reviso blogpost y el texto que cambie no está. Vuelvo a cambiarme a la rama master, y si abro blogpost en el navegador, tampoco se verán los cambios de texto que realice, pero si ejecuto el comando <span class="consola">git stash pop</span> aparecerá el texto que edite</p>
+                            <p>Los cambios temporales que guardo en stash pueden ser movidos a una rama nueva. Por ejemplo, en blogpost.html edito el texto del título y lo escribo en inglés "Your firts option in blogs". Guardo los cambios con <span class="consola">git stash</span> y luego los nuevo a una nueva rama <span class="ejemplos">git stash branch english-version</span></p>
+                            <p>Ahora estaré dentro de la nueva rama (english-version) y si vuelvo a ejecutar<span class="consola">git status</span> me mostrara el error que los cambios en blogpost.html no han sido guardados, para solucionarlo guardo los cambios con <span class="ejemplos">git commit -am "I speak english now"</span></p>
+                            <p>¿Qué pasa si realizo muchos cambios, pero me doy cuenta que en realidad no eran necesarios o no se ven tan bien como creía?</p>
+                            <p>Para esos casos es recomendable git stash, guardo los cambios temporales, y mi código volverá a la versión que esta guardada en el último commit que hice.</p>
+                            <p>En el caso en que los últimos cambios que hice no me sirvieron o no me gustaron, solamente los elimino de la memoria temporal con el comando <span class="consola">git stash drop</span></p>
+                            <p>Finalmente, si reviso nuevamente con <span class="consola">git stash list</span> no debería aparecerme ningún archivo en la memoria temporal.</p>
                         </div>
                     </div>
                 </div>
