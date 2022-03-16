@@ -956,6 +956,29 @@
                         </div>
                     </div>
                 </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelEncabezado38">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso38" aria-expanded="false" aria-controls="panelColapso38">
+                            Git cherry-pick traer commits viejos al head de un branch
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="panelColapso38" aria-labelledby="panelEncabezado38" data-bs-parent="#panelAcordion6">
+                        <div class="accordion-body">
+                            <p>Para este ejemplo, creare cambios en el archivo readme.md</p>
+                            <p>Guardo los cambios de forma temporal con el comando <span class="consola">git stash</span> y luego muevo esos cambios a una nueva rama con <span class="ejemplos">git stash brach readme-mejorado</span>.</p>
+                            <p>En la rama readme-mejorado guardare los cambios con un commit, luego agrego más cambios al archivo readme y los guardo en un nuevo commit.</p>
+                            <p>Si quiero ver una lista de los commits que he grabado así como las rutas a las que pertenecen puedo ejecutar el comando <span class="consola">git log --oneline</span>.</p>
+                            <p>Edito una vez más el archivo readme y guardo un nuevo commit. Ahora la rama readme-mejorado tendrá 3 commits nuevos del archivo readme que he editado.</p>
+                            <p>Si vuelvo a la rama master, el archivo readme se verá como al principio, pero si quiero traer uno de los cambios que hice en vez de todos puedo utilizar el comando <span class="consola">cherry pick</span>.</p>
+                            <p>Vuelvo a cambiarme a la rama readme-mejorado, y con <span class="consola">git log --oneline</span> busco el id del commit que quiero llevar a la rama master. Lo copio y vuelvo a cambiarme a la rama master</p>
+                            <p>En la rama master escribo el comando <span class="ejemplos">git cherry-pick 4e72887</span></p>
+                            <p>Los cambios serán cargados en mi archivo readme.md y no necesito un commit nuevo para guardarlos, ya que rescata el commit que cree en la rama readme-mejorado.</p>
+                            <p>Subo los cambios a github con <span class="consola">git pull</span> y <span class="consola">git push</span> y veo la historia del readme.</p>
+                            <p>Si intentara hacer un merge de master hacia readme-mejorado se produciría un error, ya que habría un conflicto entre el código que agregue antes en la rama readme-mejorado y el mismo código que traje con cherry-pick</p>
+                            <p><strong>CHERRY PICK es una mala practica</strong>, porque estas reconstruyendo la historia de tu proyecto y pueden producirse muchos errores de redundancia de datos. Es mejor darse la vuelta larga y mas segura utilizando merge y checkout.</p>
+                        </div>
+                    </div>
+                </div>
 
             </div>            
             <!--cierre seccion capitulo seis-->
