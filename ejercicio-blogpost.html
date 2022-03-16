@@ -938,6 +938,24 @@
                         </div>
                     </div>
                 </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelEncabezado37">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso37" aria-expanded="false" aria-controls="panelColapso37">
+                            Git Clean limpiar tu proyecto de archivos no deseados
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="panelColapso37" aria-labelledby="panelEncabezado37" data-bs-parent="#panelAcordion6">
+                        <div class="accordion-body">
+                            <p>A veces se crean archivos en tu proyecto que realmente no son necesarios (archivos repetidos)</p>
+                            <p>Para llevarlo a lo practico, en el ejemplo, copiare y pegare el archivo historia.txt varias veces para que se repita, lo mismo con la imagen de dragón.</p>
+                            <p>Si ejecuto el comando <span class="consola">git clean</span> me mostrara un error, indicando que si continuo borrare todo el proyecto. Es por eso que no debe ser utilizado solo.</p>
+                            <p>La forma correcta de utilizar este comando es <span class="ejemplos">git clean --dry-run</span>, en la consola me mostrara una lista con todos los archivos que repetí copiando.</p>
+                            <p>Ahora, para eliminar los archivos de esta lista, ejecuto el comando <span class="ejemplos">git clean -f</span></p>
+                            <p>Ahora si copio y pego una carpeta para repetirla y repito los pasos anteriores, <span class="consola">git clean</span> no detectara la carpeta repetida, ya que a git le importan los archivos y no las carpetas (estas carpetas repetidas las tengo que eliminar yo de forma manual).</p>
+                            <p>Si copio y pego una imagen repetida que termine en .jpg tampoco será detectada por <span class="consola">git clean</span>, ya que en la configuración de mi archivo .gitignore le di prioridad a git para no tener en cuenta las imágenes jpg</p>
+                        </div>
+                    </div>
+                </div>
 
             </div>            
             <!--cierre seccion capitulo seis-->
