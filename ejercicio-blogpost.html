@@ -1031,12 +1031,17 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="panelEncabezado41">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso41" aria-expanded="false" aria-controls="panelColapso41">
-                            
+                            Buscar en archivos y commits de Git con Grep y log
                         </button>
                     </h2>
                     <div class="accordion-collapse collapse" id="panelColapso41" aria-labelledby="panelEncabezado41" data-bs-parent="#panelAcordion7">
                         <div class="accordion-body">
-
+                            <p>A medida que el proyecto se hace grande, tu querrás buscar ciertas cosas, por ejemplo: ¿cuantas veces se utilizó la palabra color? Eso se puede saber utilizando el comando <span class="consola">git grep</span> y la palabra que quieras buscar, por ejemplo: <span class="ejemplos">git grep color</span>. En la consola me aparece que esta escrito en 3 lugares en el archivo estilos.css </p>
+                            <p>Y en el caso que quiero saber en qué línea del código tengo la palabra color, para eso agrego el -n al comando, por ejemplo: <span class="ejemplos">git grep -n color</span>. En la consola me apareceran las lineas del codigo donde esta esa palabra, por ejemplo: línea 3, línea 13 y línea 22</p>
+                            <p>Una de las mejores opciones de esta función es buscar partes del código que pueden estar mal escritas, por ejemplo, haber escrito mal un nombre, <strong>Fransico</strong>  en vez de <strong>Francisco</strong> .</p>
+                            <p>También puedo saber la cantidad de veces que he utilizado una palabra en uno o mas archivos, por ejemplo, quiero saber cuantas veces he escrito la palabra "blog", para esto escribo el comando <span class="ejemplos">git grep -c blog</span>. La respuesta que me aparece en la consola es: 1 vez en readme y 4 veces en blogpost.html</p>
+                            <p>Si quiero buscar un tipo de etiqueta que he utilizado en el html, debo agregar el texto entre comillas, por ejemplo, la etiqueta < p >: puedo buscar la cantidad de veces que la usado el comando <span class="ejemplos">git grep -c "< p >"</span> o las líneas de código en donde he usado la etiqueta con el comando <span class="ejemplos">git grep -n "< p >"</span></p>
+                            <p>Y como ultima opción, también puedo buscar una palabra que haya utilizado dentro de los commit, por ejemplo, en cuales commit utilice la palabra cabecera, para hacerlo, cambio el grep por log y agrego una s mayúscula, el comando quedaría así: <span class="ejemplos">git log -S "cabecera"</span>.</p>
                         </div>
                     </div>
                 </div>
