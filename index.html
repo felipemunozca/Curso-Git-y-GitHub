@@ -15,16 +15,49 @@
 </head>
 <body>
 
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Git & GitHub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./ejercicio-blogpost.html">Mis apuntes</a>
+                    </li>
+                </ul>
+<!--                 <form class="d-flex">
+                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    <a class="nav-link" href="./ejercicio-blogpost.html">Apuntes Ejercicio</a>
+                </form> -->
+            </div>
+        </div>
+    </nav>
+
+    <section class="container text-center">
+        <div class="marcoCapitulo">
+            <h1>Curso Profesional de Git y GitHub</h1>
+            <h3>De la escuela de Desarrollo Web</h3>
+            <h4>Instruido por Freddy Vega</h4>
+        </div>
+    </section>
+
     <!--inicio seccion de resumenes-->
-    <div class="container hoja-en-blanco">
-        <div>
+    <section class="container">
+
             <!--inicio seccion capitulo uno-->
-                <h3>Capitulo 1: introducción a git </h3>
+            <div class="marcoCapitulo">
+                <h3 class="mb-3">Capitulo 1: introducción a git </h3>
                 <div class="accordion accordion-flush" id="panelAcordion">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="panelEncabezado1">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso1" aria-expanded="false" aria-controls="panelColapso1">
-                                ¿Por qué usar un sistema de versiones?
+                                1 - ¿Por qué usar un sistema de versiones?
                             </button>
                         </h2>
                         <div class="accordion-collapse collapse" id="panelColapso1" aria-labelledby="panelEncabezado1" data-bs-parent="#panelAcordion">
@@ -52,12 +85,12 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="panelEncabezado2">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso2" aria-expanded="false" aria-controls="panelColapso2">
-                                Instalando Git en Windows
+                                2 - Instalando Git en Windows
                             </button>
                         </h2>
                         <div class="accordion-collapse collapse" id="panelColapso2" aria-labelledby="panelEncabezado2" data-bs-parent="#panelAcordion">
                             <div class="accordion-body">
-                                <p>LWindows y Linux tienen comandos diferentes, graban el ENTER de formas diferentes y tienen muchas otras diferencias. Cuando instales Git Bash en Windows debes elegir si prefieres trabajar con la forma de Windows o la forma de UNIX (Linux y Mac).</p>
+                                <p>Windows y Linux tienen comandos diferentes, graban el ENTER de formas diferentes y tienen muchas otras diferencias. Cuando instales Git Bash en Windows debes elegir si prefieres trabajar con la forma de Windows o la forma de UNIX (Linux y Mac).</p>
                                 <p>Ten en cuenta que, normalmente, los entornos de desarrollo profesionales tienen personas que usan sistemas operativos diferentes. Esto significa que, si todos podemos usar los mismos comandos, el trabajo resultará más fácil para todos en el equipo.</p>
                                 <p>Los comandos de UNIX son los más comunes entre los equipos de desarrollo. Así que, a menos que trabajes con tecnologías nativas de Microsoft (por ejemplo, .NET), la recomendación es que elijas la opción de la terminal tipo UNIX para obtener una mejor compatibilidad con todo tu equipo.</p>
                             </div>
@@ -66,7 +99,7 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="panelEncabezado3">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso3" aria-expanded="false" aria-controls="panelColapso3">
-                                Instalando Git en Linux
+                                3 - Instalando Git en Linux
                             </button>
                         </h2>
                         <div class="accordion-collapse collapse" id="panelColapso3" aria-labelledby="panelEncabezado3" data-bs-parent="#panelAcordion">
@@ -81,7 +114,7 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="panelEncabezado4">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso4" aria-expanded="false" aria-controls="panelColapso4">
-                                Archivos binarios y de texto plano
+                                4 - Archivos binarios y de texto plano
                             </button>
                         </h2>
                         <div class="accordion-collapse collapse" id="panelColapso4" aria-labelledby="panelEncabezado4" data-bs-parent="#panelAcordion">
@@ -100,7 +133,7 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="panelEncabezado5">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso5" aria-expanded="false" aria-controls="panelColapso5">
-                                Introducción a la línea de comandos
+                                5 - Introducción a la línea de comandos
                             </button>
                         </h2>
                         <div class="accordion-collapse collapse" id="panelColapso5" aria-labelledby="panelEncabezado5" data-bs-parent="#panelAcordion">
@@ -134,19 +167,18 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
+            </div>
             <!--cierre seccion capitulo uno-->
 
-                <br>
-
             <!--inicio seccion capitulo dos-->
-                <h3>Capitulo 2: comandos basicos en git </h3>
+            <div class="marcoCapitulo">
+                <h3 class="mb-3">Capitulo 2: comandos basicos en git </h3>
                 <div class="accordion accordion-flush" id="panelAcordion">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="panelEncabezado6">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso6" aria-expanded="false" aria-controls="panelColapso6">
-                                Crear un repositorio
+                                6 - Crear un repositorio
                             </button>
                         </h2>
                         <div class="accordion-collapse collapse" id="panelColapso6" aria-labelledby="panelEncabezado6" data-bs-parent="#panelAcordion">
@@ -165,7 +197,7 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="panelEncabezado7">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso7" aria-expanded="false" aria-controls="panelColapso7">
-                                Analizar cambios en los archivos
+                                7 - Analizar cambios en los archivos
                             </button>
                         </h2>
                         <div class="accordion-collapse collapse" id="panelColapso7" aria-labelledby="panelEncabezado7" data-bs-parent="#panelAcordion">
@@ -179,7 +211,7 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="panelEncabezado8">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso8" aria-expanded="false" aria-controls="panelColapso8">
-                                Staging
+                                8 - Staging
                             </button>
                         </h2>
                         <div class="accordion-collapse collapse" id="panelColapso8" aria-labelledby="panelEncabezado8" data-bs-parent="#panelAcordion">
@@ -209,7 +241,7 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="panelEncabezado9">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso9" aria-expanded="false" aria-controls="panelColapso9">
-                                Branch
+                                9 - Branch
                             </button>
                         </h2>
                         <div class="accordion-collapse collapse" id="panelColapso9" aria-labelledby="panelEncabezado9" data-bs-parent="#panelAcordion">
@@ -228,7 +260,7 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="panelEncabezado10">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso10" aria-expanded="false" aria-controls="panelColapso10">
-                                Volver en el tiempo
+                                10 - Volver en el tiempo
                             </button>
                         </h2>
                         <div class="accordion-collapse collapse" id="panelColapso10" aria-labelledby="panelEncabezado10" data-bs-parent="#panelAcordion">
@@ -246,7 +278,7 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="panelEncabezado11">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso11" aria-expanded="false" aria-controls="panelColapso11">
-                                Git reset VS Git rm
+                                11 - Git reset VS Git rm
                             </button>
                         </h2>
                         <div class="accordion-collapse collapse" id="panelColapso11" aria-labelledby="panelEncabezado11" data-bs-parent="#panelAcordion">
@@ -268,19 +300,18 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
+            </div>
             <!--cierre seccion capitulo dos-->
-                
-                <br>
 
             <!--inicio seccion capitulo tres-->
-                <h3>Capitulo 3: flujo de trabajo basico en git</h3>
+            <div class="marcoCapitulo">
+                <h3 class="mb-3">Capitulo 3: flujo de trabajo basico en git</h3>
                 <div class="accordion accordion-flush" id="panelAcordion">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="panelEncabezado14">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso14" aria-expanded="false" aria-controls="panelColapso14">
-                                Flujo de trabajo básico con un repositorio
+                                14 - Flujo de trabajo básico con un repositorio
                             </button>
                         </h2>
                         <div class="accordion-collapse collapse" id="panelColapso14" aria-labelledby="panelEncabezado14" data-bs-parent="#panelAcordion">
@@ -302,7 +333,7 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="panelEncabezado15">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso15" aria-expanded="false" aria-controls="panelColapso15">
-                                Introducción a ramas en git
+                                15 - Introducción a ramas en git
                             </button>
                         </h2>
                         <div class="accordion-collapse collapse" id="panelColapso15" aria-labelledby="panelEncabezado15" data-bs-parent="#panelAcordion">
@@ -315,7 +346,7 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="panelEncabezado16">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso16" aria-expanded="false" aria-controls="panelColapso16">
-                                Fusión de ramas con git merge
+                                16 - Fusión de ramas con git merge
                             </button>
                         </h2>
                         <div class="accordion-collapse collapse" id="panelColapso16" aria-labelledby="panelEncabezado16" data-bs-parent="#panelAcordion">
@@ -339,7 +370,7 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="panelEncabezado17">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso17" aria-expanded="false" aria-controls="panelColapso17">
-                                Resolución de conflictos con merge
+                                17 - Resolución de conflictos con merge
                             </button>
                         </h2>
                         <div class="accordion-collapse collapse" id="panelColapso17" aria-labelledby="panelEncabezado17" data-bs-parent="#panelAcordion">
@@ -352,348 +383,348 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
+            </div>
+                
             <!--cierre seccion capitulo tres-->
 
-                <br>
-
             <!--inicio seccion capitulo cuatro-->
-            <h3>Capitulo 4: trabajando con repositorios remotos en GitHub</h3>
-            <div class="accordion accordion-flush" id="panelAcordion">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="panelEncabezado18">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso18" aria-expanded="false" aria-controls="panelColapso18">
-                            Cambios de master a main
-                        </button>
-                    </h2>
-                    <div class="accordion-collapse collapse" id="panelColapso18" aria-labelledby="panelEncabezado18" data-bs-parent="#panelAcordion">
-                        <div class="accordion-body">
-                            <p>El escritor Argentino Julio Cortázar afirma que las palabras tienen color y peso. Por otro lado, los sinónimos existen por definición, pero no expresan lo mismo. Feo no es lo mismo que desagradable, ni aromático es lo mismo que oloroso.</p>
-                            <p>Por lo anterior podemos afirmar que los sinónimos no expresan lo mismo, no tienen el mismo “color” ni el mismo “peso”.</p>
-                            <p>Desde el 1 de octubre de 2020 GitHub cambió el nombre de la rama principal: ya no es “master” -como aprenderás en el curso- sino main.</p>
-                            <p>Este derivado de una profunda reflexión ocasionada por el movimiento #BlackLivesMatter.</p>
-                            <p>La industria de la tecnología lleva muchos años usando términos como master, slave, blacklist o whitelist y esperamos pronto puedan ir desapareciendo.</p>
-                            <p>Y sí, las palabras importan. Por lo que de aquí en adelante cada vez que escuches a Freddy mencionar “master” debes saber que hace referencia a “main”</p>
+            <div class="marcoCapitulo">
+                <h3 class="mb-3">Capitulo 4: trabajando con repositorios remotos en GitHub</h3>
+                <div class="accordion accordion-flush" id="panelAcordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelEncabezado18">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso18" aria-expanded="false" aria-controls="panelColapso18">
+                                18 - Cambios de master a main
+                            </button>
+                        </h2>
+                        <div class="accordion-collapse collapse" id="panelColapso18" aria-labelledby="panelEncabezado18" data-bs-parent="#panelAcordion">
+                            <div class="accordion-body">
+                                <p>El escritor Argentino Julio Cortázar afirma que las palabras tienen color y peso. Por otro lado, los sinónimos existen por definición, pero no expresan lo mismo. Feo no es lo mismo que desagradable, ni aromático es lo mismo que oloroso.</p>
+                                <p>Por lo anterior podemos afirmar que los sinónimos no expresan lo mismo, no tienen el mismo “color” ni el mismo “peso”.</p>
+                                <p>Desde el 1 de octubre de 2020 GitHub cambió el nombre de la rama principal: ya no es “master” -como aprenderás en el curso- sino main.</p>
+                                <p>Este derivado de una profunda reflexión ocasionada por el movimiento #BlackLivesMatter.</p>
+                                <p>La industria de la tecnología lleva muchos años usando términos como master, slave, blacklist o whitelist y esperamos pronto puedan ir desapareciendo.</p>
+                                <p>Y sí, las palabras importan. Por lo que de aquí en adelante cada vez que escuches a Freddy mencionar “master” debes saber que hace referencia a “main”</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="panelEncabezado19">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso19" aria-expanded="false" aria-controls="panelColapso019">
-                            Uso de GitHub
-                        </button>
-                    </h2>
-                    <div class="accordion-collapse collapse" id="panelColapso19" aria-labelledby="panelEncabezado19" data-bs-parent="#panelAcordion">
-                        <div class="accordion-body">
-                            <p>GitHub es una plataforma que nos permite guardar repositorios de Git que podemos usar como servidores remotos y ejecutar algunos comandos de forma visual e interactiva (sin necesidad de la consola de comandos).</p>
-                            <p>Luego de crear nuestra cuenta, podemos crear o importar repositorios, crear organizaciones y proyectos de trabajo, descubrir repositorios de otras personas, contribuir a esos proyectos, dar estrellas y muchas otras cosas.</p>
-                            <p>El README.md es el archivo que veremos por defecto al entrar a un repositorio. Es una muy buena práctica configurarlo para describir el proyecto, los requerimientos y las instrucciones que debemos seguir para contribuir correctamente.</p>
-                            <p>Para clonar un repositorio desde GitHub (o cualquier otro servidor remoto) debemos copiar la URL (por ahora, usando HTTPS) y ejecutar el comando <span class="consola">git clone + la URL</span> que acabamos de copiar. Esto descargara la versión de nuestro proyecto que se encuentra en GitHub.</p>
-                            <p>Sin embargo, esto solo funciona para las personas que quieren empezar a contribuir en el proyecto. Si queremos conectar el repositorio de GitHub con nuestro repositorio local, el que creamos con git init, debemos ejecutar las siguientes instrucciones:</p>
-                            <ul>
-                                <li>Primero: Guardar la URL del repositorio de GitHub con el nombre de origin con el comando <span class="consola">git remote add origin URL</span></li>
-                                <li>Segundo: Verificar que la URL se haya guardado correctamente con el comando <span class="consola">git remote</span> o tambien <span class="consola">git remote -v</span></li>
-                                <li>Tercero: Traer la versión del repositorio remoto y hacer merge para crear un commit con los archivos de ambas partes. Podemos usar los comandos <span class="consola">git fetch</span> y <span class="consola">git merge</span> o solo utilizar el comando <span class="consola">git pull origin master --allow-unrelated-histories</span></li>
-                                <li>Por último: ahora sí podemos hacer un push para guardar los cambios de nuestro repositorio local en GitHub: <span class="consola">git push origin master</span>.</li>
-                            </ul>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelEncabezado19">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso19" aria-expanded="false" aria-controls="panelColapso019">
+                                19 - Uso de GitHub
+                            </button>
+                        </h2>
+                        <div class="accordion-collapse collapse" id="panelColapso19" aria-labelledby="panelEncabezado19" data-bs-parent="#panelAcordion">
+                            <div class="accordion-body">
+                                <p>GitHub es una plataforma que nos permite guardar repositorios de Git que podemos usar como servidores remotos y ejecutar algunos comandos de forma visual e interactiva (sin necesidad de la consola de comandos).</p>
+                                <p>Luego de crear nuestra cuenta, podemos crear o importar repositorios, crear organizaciones y proyectos de trabajo, descubrir repositorios de otras personas, contribuir a esos proyectos, dar estrellas y muchas otras cosas.</p>
+                                <p>El README.md es el archivo que veremos por defecto al entrar a un repositorio. Es una muy buena práctica configurarlo para describir el proyecto, los requerimientos y las instrucciones que debemos seguir para contribuir correctamente.</p>
+                                <p>Para clonar un repositorio desde GitHub (o cualquier otro servidor remoto) debemos copiar la URL (por ahora, usando HTTPS) y ejecutar el comando <span class="consola">git clone + la URL</span> que acabamos de copiar. Esto descargara la versión de nuestro proyecto que se encuentra en GitHub.</p>
+                                <p>Sin embargo, esto solo funciona para las personas que quieren empezar a contribuir en el proyecto. Si queremos conectar el repositorio de GitHub con nuestro repositorio local, el que creamos con git init, debemos ejecutar las siguientes instrucciones:</p>
+                                <ul>
+                                    <li>Primero: Guardar la URL del repositorio de GitHub con el nombre de origin con el comando <span class="consola">git remote add origin URL</span></li>
+                                    <li>Segundo: Verificar que la URL se haya guardado correctamente con el comando <span class="consola">git remote</span> o tambien <span class="consola">git remote -v</span></li>
+                                    <li>Tercero: Traer la versión del repositorio remoto y hacer merge para crear un commit con los archivos de ambas partes. Podemos usar los comandos <span class="consola">git fetch</span> y <span class="consola">git merge</span> o solo utilizar el comando <span class="consola">git pull origin master --allow-unrelated-histories</span></li>
+                                    <li>Por último: ahora sí podemos hacer un push para guardar los cambios de nuestro repositorio local en GitHub: <span class="consola">git push origin master</span>.</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="panelEncabezado20">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso20" aria-expanded="false" aria-controls="panelColapso20">
-                            Cómo funcionan las llaves públicas y privadas
-                        </button>
-                    </h2>
-                    <div class="accordion-collapse collapse" id="panelColapso20" aria-labelledby="panelEncabezado20" data-bs-parent="#panelAcordion">
-                        <div class="accordion-body">
-                            <p>Las llaves públicas y privadas nos ayudan a cifrar y descifrar nuestros archivos de forma que los podamos compartir sin correr el riesgo de que sean interceptados por personas con malas intenciones.</p>
-                            <p>La forma de hacerlo es la siguiente:</p>
-                            <ul>
-                                <li>1. Ambas personas deben crear su llave pública y privada.</li>
-                                <li>2. Ambas personas pueden compartir su llave pública a las otras partes (recuerda que esta llave es pública, no hay problema si la “interceptan”).</li>
-                                <li>3. La persona que quiere compartir un mensaje puede usar la llave pública de la otra persona para cifrar los archivos y asegurarse que solo puedan ser descifrados con la llave privada de la persona con la que queremos compartir el mensaje.</li>
-                                <li>4. El mensaje está cifrado y puede ser enviado a la otra persona sin problemas en caso de que los archivos sean interceptados.</li>
-                                <li>5. La persona a la que enviamos el mensaje cifrado puede usar su llave privada para descifrar el mensaje y ver los archivos.</li>
-                            </ul>
-                            <p>Puedes compartir tu llave pública pero nunca tu llave privada.</p>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelEncabezado20">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso20" aria-expanded="false" aria-controls="panelColapso20">
+                                20 - Cómo funcionan las llaves públicas y privadas
+                            </button>
+                        </h2>
+                        <div class="accordion-collapse collapse" id="panelColapso20" aria-labelledby="panelEncabezado20" data-bs-parent="#panelAcordion">
+                            <div class="accordion-body">
+                                <p>Las llaves públicas y privadas nos ayudan a cifrar y descifrar nuestros archivos de forma que los podamos compartir sin correr el riesgo de que sean interceptados por personas con malas intenciones.</p>
+                                <p>La forma de hacerlo es la siguiente:</p>
+                                <ul>
+                                    <li>1. Ambas personas deben crear su llave pública y privada.</li>
+                                    <li>2. Ambas personas pueden compartir su llave pública a las otras partes (recuerda que esta llave es pública, no hay problema si la “interceptan”).</li>
+                                    <li>3. La persona que quiere compartir un mensaje puede usar la llave pública de la otra persona para cifrar los archivos y asegurarse que solo puedan ser descifrados con la llave privada de la persona con la que queremos compartir el mensaje.</li>
+                                    <li>4. El mensaje está cifrado y puede ser enviado a la otra persona sin problemas en caso de que los archivos sean interceptados.</li>
+                                    <li>5. La persona a la que enviamos el mensaje cifrado puede usar su llave privada para descifrar el mensaje y ver los archivos.</li>
+                                </ul>
+                                <p>Puedes compartir tu llave pública pero nunca tu llave privada.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="panelEncabezado21">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso21" aria-expanded="false" aria-controls="panelColapso21">
-                            Configura tus llaves SSH en local
-                        </button>
-                    </h2>
-                    <div class="accordion-collapse collapse" id="panelColapso21" aria-labelledby="panelEncabezado21" data-bs-parent="#panelAcordion">
-                        <div class="accordion-body">
-                            <p>Primer paso: Generar tus llaves SSH. Recuerda que es muy buena idea proteger tu llave privada con una contraseña. Escribe el comando: <span class="consola">ssh-keygen -t rsa -b 4096 -C "tu@email.com"</span></p>
-                            <p>Segundo paso: Terminar de configurar nuestro sistema.</p>
-                            <p>En Windows y Linux:</p>
-                            <ul>
-                                <li>Encender el "servidor" de llaves SSH de tu computadora: <span class="consola">eval $(ssh-agent -s)</span></li>
-                                <li>Añadir tu llave SSH a este "servidor": <span class="consola">ssh-add ruta-donde-guardaste-tu-llave-privada</span></li>
-                            </ul>
-                            <p>En Mac:</p>
-                            <li>Encender el "servidor" de llaves SSH de tu computadora: <span class="consola">eval "$(ssh-agent -s)"</span></li>
-                            <li>Si usas una versión de OSX superior a Mac Sierra (v10.12) debes crear o modificar un archivo "config" en la carpeta de tu usuario con el siguiente contenido (ten cuidado con las mayúsculas): <span class="consola">Host * AddKeysToAgent yes
-                            UseKeychain yes
-                            IdentityFile ruta-donde-guardaste-tu-llave-privada</span></li>
-                            <li>Añadir tu llave SSH al "servidor" de llaves SSH de tu omputadora (en caso de error puedes ejecutar este mismo comando pero sin el argumento -K): <span class="consola">ssh-add -K ruta-donde-guardaste-tu-llave-privada</span>.</li>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelEncabezado21">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso21" aria-expanded="false" aria-controls="panelColapso21">
+                                21 - Configura tus llaves SSH en local
+                            </button>
+                        </h2>
+                        <div class="accordion-collapse collapse" id="panelColapso21" aria-labelledby="panelEncabezado21" data-bs-parent="#panelAcordion">
+                            <div class="accordion-body">
+                                <p>Primer paso: Generar tus llaves SSH. Recuerda que es muy buena idea proteger tu llave privada con una contraseña. Escribe el comando: <span class="consola">ssh-keygen -t rsa -b 4096 -C "tu@email.com"</span></p>
+                                <p>Segundo paso: Terminar de configurar nuestro sistema.</p>
+                                <p>En Windows y Linux:</p>
+                                <ul>
+                                    <li>Encender el "servidor" de llaves SSH de tu computadora: <span class="consola">eval $(ssh-agent -s)</span></li>
+                                    <li>Añadir tu llave SSH a este "servidor": <span class="consola">ssh-add ruta-donde-guardaste-tu-llave-privada</span></li>
+                                </ul>
+                                <p>En Mac:</p>
+                                <li>Encender el "servidor" de llaves SSH de tu computadora: <span class="consola">eval "$(ssh-agent -s)"</span></li>
+                                <li>Si usas una versión de OSX superior a Mac Sierra (v10.12) debes crear o modificar un archivo "config" en la carpeta de tu usuario con el siguiente contenido (ten cuidado con las mayúsculas): <span class="consola">Host * AddKeysToAgent yes
+                                UseKeychain yes
+                                IdentityFile ruta-donde-guardaste-tu-llave-privada</span></li>
+                                <li>Añadir tu llave SSH al "servidor" de llaves SSH de tu omputadora (en caso de error puedes ejecutar este mismo comando pero sin el argumento -K): <span class="consola">ssh-add -K ruta-donde-guardaste-tu-llave-privada</span>.</li>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="panelEncabezado22">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso22" aria-expanded="false" aria-controls="panelColapso22">
-                            Conexión a GitHub con SSH
-                        </button>
-                    </h2>
-                    <div class="accordion-collapse collapse" id="panelColapso22" aria-labelledby="panelEncabezado22" data-bs-parent="#panelAcordion">
-                        <div class="accordion-body">
-                            <p>Luego de crear nuestras llaves SSH podemos entregarle la llave pública a GitHub para comunicarnos de forma segura y sin necesidad de escribir nuestro usuario y contraseña todo el tiempo.</p>
-                            <p>Para esto debes entrar a la Configuración de Llaves SSH en GitHub, crear una nueva llave con el nombre que le quieras dar y el contenido de la llave pública de tu computador.</p>
-                            <p>Ahora podemos actualizar la URL que guardamos en nuestro repositorio remoto, solo que, en vez de guardar la URL con HTTPS, vamos a usar la URL con SSH: <span class="consola">git remote set-url origin url-ssh-del-repositorio-en-github</span>.</p>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelEncabezado22">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso22" aria-expanded="false" aria-controls="panelColapso22">
+                                22 - Conexión a GitHub con SSH
+                            </button>
+                        </h2>
+                        <div class="accordion-collapse collapse" id="panelColapso22" aria-labelledby="panelEncabezado22" data-bs-parent="#panelAcordion">
+                            <div class="accordion-body">
+                                <p>Luego de crear nuestras llaves SSH podemos entregarle la llave pública a GitHub para comunicarnos de forma segura y sin necesidad de escribir nuestro usuario y contraseña todo el tiempo.</p>
+                                <p>Para esto debes entrar a la Configuración de Llaves SSH en GitHub, crear una nueva llave con el nombre que le quieras dar y el contenido de la llave pública de tu computador.</p>
+                                <p>Ahora podemos actualizar la URL que guardamos en nuestro repositorio remoto, solo que, en vez de guardar la URL con HTTPS, vamos a usar la URL con SSH: <span class="consola">git remote set-url origin url-ssh-del-repositorio-en-github</span>.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="panelEncabezado23">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso23" aria-expanded="false" aria-controls="panelColapso23">
-                            Tags y versiones en Git y GitHub
-                        </button>
-                    </h2>
-                    <div class="accordion-collapse collapse" id="panelColapso23" aria-labelledby="panelEncabezado23" data-bs-parent="#panelAcordion">
-                        <div class="accordion-body">
-                            <p>Los tags o etiquetas nos permiten asignar versiones a los commits con cambios más importantes o significativos de nuestro proyecto.</p>
-                            <p>Comandos para trabajar con etiquetas:</p>
-                            <ul>
-                                <li>Crear un nuevo tag y asignarlo a un commit: <span class="consola">git tag -a nombre-del-tag id-del-commit</span>.</li>
-                                <li>Borrar un tag en el repositorio local: <span class="consola">git tag -d nombre-del-tag</span>.</li>
-                                <li>Listar los tags de nuestro repositorio local: <span class="consola">git tag o git show-ref --tags</span>.</li>
-                                <li>Publicar un tag en el repositorio remoto: <span class="consola">git push origin --tags</span>.</li>
-                                <li>Borrar un tag del repositorio remoto: <span class="consola">git tag -d nombre-del-tag y git push origin :refs/tags/nombre-del-tag</span></li>
-                            </ul>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelEncabezado23">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso23" aria-expanded="false" aria-controls="panelColapso23">
+                                23 - Tags y versiones en Git y GitHub
+                            </button>
+                        </h2>
+                        <div class="accordion-collapse collapse" id="panelColapso23" aria-labelledby="panelEncabezado23" data-bs-parent="#panelAcordion">
+                            <div class="accordion-body">
+                                <p>Los tags o etiquetas nos permiten asignar versiones a los commits con cambios más importantes o significativos de nuestro proyecto.</p>
+                                <p>Comandos para trabajar con etiquetas:</p>
+                                <ul>
+                                    <li>Crear un nuevo tag y asignarlo a un commit: <span class="consola">git tag -a nombre-del-tag id-del-commit</span>.</li>
+                                    <li>Borrar un tag en el repositorio local: <span class="consola">git tag -d nombre-del-tag</span>.</li>
+                                    <li>Listar los tags de nuestro repositorio local: <span class="consola">git tag o git show-ref --tags</span>.</li>
+                                    <li>Publicar un tag en el repositorio remoto: <span class="consola">git push origin --tags</span>.</li>
+                                    <li>Borrar un tag del repositorio remoto: <span class="consola">git tag -d nombre-del-tag y git push origin :refs/tags/nombre-del-tag</span></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="panelEncabezado24">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso24" aria-expanded="false" aria-controls="panelColapso24">
-                            Manejo de ramas en GitHub
-                        </button>
-                    </h2>
-                    <div class="accordion-collapse collapse" id="panelColapso24" aria-labelledby="panelEncabezado24" data-bs-parent="#panelAcordion">
-                        <div class="accordion-body">
-                            <p>Puedes trabajar con ramas que nunca envías a GitHub, así como pueden haber ramas importantes en GitHub que nunca usas en el repositorio local. Lo importante es que aprendas a manejarlas para trabajar profesionalmente.</p>
-                            <p>Crear una rama en el repositorio local: <span class="consola">git branch nombre-de-la-rama</span> o <span class="consola">git checkout -b nombre-de-la-rama</span>.</p>
-                            <p>Publicar una rama local al repositorio remoto: <span class="consola">git push origin nombre-de-la-rama</span>.</p>
-                            <p>Recuerda que podemos ver gráficamente nuestro entorno y flujo de trabajo local con Git usando el comando <span class="consola">gitk</span>.</p>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelEncabezado24">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso24" aria-expanded="false" aria-controls="panelColapso24">
+                                24 - Manejo de ramas en GitHub
+                            </button>
+                        </h2>
+                        <div class="accordion-collapse collapse" id="panelColapso24" aria-labelledby="panelEncabezado24" data-bs-parent="#panelAcordion">
+                            <div class="accordion-body">
+                                <p>Puedes trabajar con ramas que nunca envías a GitHub, así como pueden haber ramas importantes en GitHub que nunca usas en el repositorio local. Lo importante es que aprendas a manejarlas para trabajar profesionalmente.</p>
+                                <p>Crear una rama en el repositorio local: <span class="consola">git branch nombre-de-la-rama</span> o <span class="consola">git checkout -b nombre-de-la-rama</span>.</p>
+                                <p>Publicar una rama local al repositorio remoto: <span class="consola">git push origin nombre-de-la-rama</span>.</p>
+                                <p>Recuerda que podemos ver gráficamente nuestro entorno y flujo de trabajo local con Git usando el comando <span class="consola">gitk</span>.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="panelEncabezado00">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso00" aria-expanded="false" aria-controls="panelColapso00">
-                            Configurar múltiples colaboradores en un repositorio de GitHub
-                        </button>
-                    </h2>
-                    <div class="accordion-collapse collapse" id="panelColapso00" aria-labelledby="panelEncabezado00" data-bs-parent="#panelAcordion">
-                        <div class="accordion-body">
-                            <p>Por defecto, cualquier persona puede clonar o descargar tu proyecto desde GitHub, pero no pueden crear commits, ni ramas, ni nada.</p>
-                            <p>Existen varias formas de solucionar esto para poder aceptar contribuciones. Una de ellas es añadir a cada persona de nuestro equipo como colaborador de nuestro repositorio.</p>
-                            <p>Solo debemos entrar a la configuración de colaboradores de nuestro proyecto (Repositorio > Settings > Collaborators) y añadir el email o username de los nuevos colaboradores.</p>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelEncabezado00">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso00" aria-expanded="false" aria-controls="panelColapso00">
+                                25 - Configurar múltiples colaboradores en un repositorio de GitHub
+                            </button>
+                        </h2>
+                        <div class="accordion-collapse collapse" id="panelColapso00" aria-labelledby="panelEncabezado00" data-bs-parent="#panelAcordion">
+                            <div class="accordion-body">
+                                <p>Por defecto, cualquier persona puede clonar o descargar tu proyecto desde GitHub, pero no pueden crear commits, ni ramas, ni nada.</p>
+                                <p>Existen varias formas de solucionar esto para poder aceptar contribuciones. Una de ellas es añadir a cada persona de nuestro equipo como colaborador de nuestro repositorio.</p>
+                                <p>Solo debemos entrar a la configuración de colaboradores de nuestro proyecto (Repositorio > Settings > Collaborators) y añadir el email o username de los nuevos colaboradores.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-            </div>            
+                </div>  
+            </div>
             <!--cierre seccion capitulo cuatro-->
 
-                <br>
-
             <!--inicio seccion capitulo cinco-->
-            <h3>Capitulo 5: Flujos de trabajo profesionales</h3>
-            <div class="accordion accordion-flush" id="panelAcordion">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="panelEncabezado27">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso27" aria-expanded="false" aria-controls="panelColapso27">
-                            Flujo de trabajo profesional con Pull requests
-                        </button>
-                    </h2>
-                    <div class="accordion-collapse collapse" id="panelColapso27" aria-labelledby="panelEncabezado27" data-bs-parent="#panelAcordion">
-                        <div class="accordion-body">
-                            <p>En un entorno profesional normalmente se bloquea la rama master, y para enviar código a dicha rama pasa por un code review y luego de su aprobación se unen códigos con los llamados merge request.</p>
-                            <p>Para realizar pruebas enviamos el código a servidores que normalmente los llamamos staging develop (servidores de pruebas) luego de que se realizan las pruebas pertinentes tanto de código como de la aplicación estos pasan a el servidor de producción con el ya antes mencionado merge request.</p>
+            <div class="marcoCapitulo">
+                <h3 class="mb-3">Capitulo 5: Flujos de trabajo profesionales</h3>
+                <div class="accordion accordion-flush" id="panelAcordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelEncabezado27">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso27" aria-expanded="false" aria-controls="panelColapso27">
+                                27 - Flujo de trabajo profesional con Pull requests
+                            </button>
+                        </h2>
+                        <div class="accordion-collapse collapse" id="panelColapso27" aria-labelledby="panelEncabezado27" data-bs-parent="#panelAcordion">
+                            <div class="accordion-body">
+                                <p>En un entorno profesional normalmente se bloquea la rama master, y para enviar código a dicha rama pasa por un code review y luego de su aprobación se unen códigos con los llamados merge request.</p>
+                                <p>Para realizar pruebas enviamos el código a servidores que normalmente los llamamos staging develop (servidores de pruebas) luego de que se realizan las pruebas pertinentes tanto de código como de la aplicación estos pasan a el servidor de producción con el ya antes mencionado merge request.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="panelEncabezado32">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso32" aria-expanded="false" aria-controls="panelColapso32">
-                            Ignorar archivos en el repositorio con .gitignore
-                        </button>
-                    </h2>
-                    <div class="accordion-collapse collapse" id="panelColapso32" aria-labelledby="panelEncabezado32" data-bs-parent="#panelAcordion">
-                        <div class="accordion-body">
-                            <p>No todos los archivos que agregas a un proyecto deberían ir a un repositorio, por ejemplo cuando tienes un archivo donde están tus contraseñas que comúnmente tienen la extensión .env o cuando te estás conectando a una base de datos; son archivos que nadie debe ver.</p>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelEncabezado32">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso32" aria-expanded="false" aria-controls="panelColapso32">
+                                32 - Ignorar archivos en el repositorio con .gitignore
+                            </button>
+                        </h2>
+                        <div class="accordion-collapse collapse" id="panelColapso32" aria-labelledby="panelEncabezado32" data-bs-parent="#panelAcordion">
+                            <div class="accordion-body">
+                                <p>No todos los archivos que agregas a un proyecto deberían ir a un repositorio, por ejemplo cuando tienes un archivo donde están tus contraseñas que comúnmente tienen la extensión .env o cuando te estás conectando a una base de datos; son archivos que nadie debe ver.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="panelEncabezado33">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso33" aria-expanded="false" aria-controls="panelColapso33">
-                            Readme.md es una excelente práctica
-                        </button>
-                    </h2>
-                    <div class="accordion-collapse collapse" id="panelColapso33" aria-labelledby="panelEncabezado33" data-bs-parent="#panelAcordion">
-                        <div class="accordion-body">
-                            <p>README.md es una excelente práctica en tus proyectos, md significa Markdown, que es una especie de código que te permite cambiar la manera en que se ve un archivo de texto.</p>
-                            <p>Lo interesante de Markdown es que funciona en muchas páginas, por ejemplo la edición en Wikipedia; es un lenguaje intermedio que no es HTML, no es texto plano, es una manera de crear excelentes texto formateados.</p>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelEncabezado33">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso33" aria-expanded="false" aria-controls="panelColapso33">
+                                33 - Readme.md es una excelente práctica
+                            </button>
+                        </h2>
+                        <div class="accordion-collapse collapse" id="panelColapso33" aria-labelledby="panelEncabezado33" data-bs-parent="#panelAcordion">
+                            <div class="accordion-body">
+                                <p>README.md es una excelente práctica en tus proyectos, md significa Markdown, que es una especie de código que te permite cambiar la manera en que se ve un archivo de texto.</p>
+                                <p>Lo interesante de Markdown es que funciona en muchas páginas, por ejemplo la edición en Wikipedia; es un lenguaje intermedio que no es HTML, no es texto plano, es una manera de crear excelentes texto formateados.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="panelEncabezado34">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso34" aria-expanded="false" aria-controls="panelColapso34">
-                            Tu sitio web público con GitHub Pages
-                        </button>
-                    </h2>
-                    <div class="accordion-collapse collapse" id="panelColapso34" aria-labelledby="panelEncabezado34" data-bs-parent="#panelAcordion">
-                        <div class="accordion-body">
-                            <p>GitHub tiene un servicio de hosting gratis llamado GitHub Pages, tu puedes tener un repositorio donde el contenido del repositorio se vaya a GitHub y se vea online.</p>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelEncabezado34">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso34" aria-expanded="false" aria-controls="panelColapso34">
+                                34 - Tu sitio web público con GitHub Pages
+                            </button>
+                        </h2>
+                        <div class="accordion-collapse collapse" id="panelColapso34" aria-labelledby="panelEncabezado34" data-bs-parent="#panelAcordion">
+                            <div class="accordion-body">
+                                <p>GitHub tiene un servicio de hosting gratis llamado GitHub Pages, tu puedes tener un repositorio donde el contenido del repositorio se vaya a GitHub y se vea online.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>             
+                </div>     
+            </div>
             <!--cierre seccion capitulo cinco-->
-
-                <br>
             
             <!--inicio seccion capitulo seis-->
-            <h3>Capitulo 6: Multiples entornos de trabajo en Git</h3>
-            <div class="accordion accordion-flush" id="panelAcordion">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="panelEncabezado35">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso35" aria-expanded="false" aria-controls="panelColapso35">
-                            Git Rebase: reorganizando el trabajo realizado
-                        </button>
-                    </h2>
-                    <div class="accordion-collapse collapse" id="panelColapso35" aria-labelledby="panelEncabezado35" data-bs-parent="#panelAcordion">
-                        <div class="accordion-body">
-                            <p>El comando rebase es una mala práctica, nunca se debe usar, pero para efectos del curso te lo vamos a enseñar para que hagas tus propios experimentos. Con rebase puedes recoger todos los cambios confirmados en una rama y ponerlos sobre otra.</p>
-                            <p>Cambiamos a la rama que queremos traer los cambios, por ejemplo: <span class="consola">git checkout experiment</span></p>
-                            <p>Aplicamos rebase para traer los cambios de la rama que queremos, por ejemplo: <span class="consola">git rebase master</span></p>
+            <div class="marcoCapitulo">
+                <h3 class="mb-3">Capitulo 6: Multiples entornos de trabajo en Git</h3>
+                <div class="accordion accordion-flush" id="panelAcordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelEncabezado35">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso35" aria-expanded="false" aria-controls="panelColapso35">
+                                35 - Git Rebase: reorganizando el trabajo realizado
+                            </button>
+                        </h2>
+                        <div class="accordion-collapse collapse" id="panelColapso35" aria-labelledby="panelEncabezado35" data-bs-parent="#panelAcordion">
+                            <div class="accordion-body">
+                                <p>El comando rebase es una mala práctica, nunca se debe usar, pero para efectos del curso te lo vamos a enseñar para que hagas tus propios experimentos. Con rebase puedes recoger todos los cambios confirmados en una rama y ponerlos sobre otra.</p>
+                                <p>Cambiamos a la rama que queremos traer los cambios, por ejemplo: <span class="consola">git checkout experiment</span></p>
+                                <p>Aplicamos rebase para traer los cambios de la rama que queremos, por ejemplo: <span class="consola">git rebase master</span></p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="panelEncabezado36">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso36" aria-expanded="false" aria-controls="panelColapso36">
-                            Git Stash: Guardar cambios en memoria y recuperarlos después
-                        </button>
-                    </h2>
-                    <div class="accordion-collapse collapse" id="panelColapso36" aria-labelledby="panelEncabezado36" data-bs-parent="#panelAcordion">
-                        <div class="accordion-body">
-                            <p>Cuando necesitamos regresar en el tiempo porque borramos alguna línea de código pero no queremos pasarnos a otra rama porque nos daría un error ya que debemos pasar ese “mal cambio” que hicimos a stage, podemos usar <span class="consola">git stash</span> para regresar el cambio anterior que hicimos.</p>
-                            <p>git stash es típico cuando estamos cambios que no merecen una rama o no merecen un rebase si no simplemente estamos probando algo y luego quieres volver rápidamente a tu versión anterior la cual es la correcta.</p>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelEncabezado36">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso36" aria-expanded="false" aria-controls="panelColapso36">
+                                36 - Git Stash: Guardar cambios en memoria y recuperarlos después
+                            </button>
+                        </h2>
+                        <div class="accordion-collapse collapse" id="panelColapso36" aria-labelledby="panelEncabezado36" data-bs-parent="#panelAcordion">
+                            <div class="accordion-body">
+                                <p>Cuando necesitamos regresar en el tiempo porque borramos alguna línea de código pero no queremos pasarnos a otra rama porque nos daría un error ya que debemos pasar ese “mal cambio” que hicimos a stage, podemos usar <span class="consola">git stash</span> para regresar el cambio anterior que hicimos.</p>
+                                <p>git stash es típico cuando estamos cambios que no merecen una rama o no merecen un rebase si no simplemente estamos probando algo y luego quieres volver rápidamente a tu versión anterior la cual es la correcta.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="panelEncabezado37">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso37" aria-expanded="false" aria-controls="panelColapso37">
-                            Git Clean: limpiar tu proyecto de archivos no deseados
-                        </button>
-                    </h2>
-                    <div class="accordion-collapse collapse" id="panelColapso37" aria-labelledby="panelEncabezado37" data-bs-parent="#panelAcordion">
-                        <div class="accordion-body">
-                            <p>A veces creamos archivos cuando estamos realizando nuestro proyecto que realmente no forman parte de nuestro directorio de trabajo, que no se deberían agregar y lo sabemos.</p>
-                            <p>Para saber qué archivos vamos a borrar tecleamos <span class="consola">git clean --dry-run</span></p>
-                            <p>Para borrar todos los archivos listados (que no son carpetas) tecleamos <span class="consola">git clean -f</span></p>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelEncabezado37">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso37" aria-expanded="false" aria-controls="panelColapso37">
+                                37 - Git Clean: limpiar tu proyecto de archivos no deseados
+                            </button>
+                        </h2>
+                        <div class="accordion-collapse collapse" id="panelColapso37" aria-labelledby="panelEncabezado37" data-bs-parent="#panelAcordion">
+                            <div class="accordion-body">
+                                <p>A veces creamos archivos cuando estamos realizando nuestro proyecto que realmente no forman parte de nuestro directorio de trabajo, que no se deberían agregar y lo sabemos.</p>
+                                <p>Para saber qué archivos vamos a borrar tecleamos <span class="consola">git clean --dry-run</span></p>
+                                <p>Para borrar todos los archivos listados (que no son carpetas) tecleamos <span class="consola">git clean -f</span></p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="panelEncabezado38">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso38" aria-expanded="false" aria-controls="panelColapso38">
-                            Git cherry-pick: traer commits viejos al head de un branch
-                        </button>
-                    </h2>
-                    <div class="accordion-collapse collapse" id="panelColapso38" aria-labelledby="panelEncabezado38" data-bs-parent="#panelAcordion">
-                        <div class="accordion-body">
-                            <p>Existe un mundo alternativo en el cual vamos avanzando en una rama pero necesitamos en master uno de esos avances de la rama, para eso utilizamos el comando <span class="consola">git cherry-pick IDCommit</span>.</p>
-                            <p>cherry-pick es una mala práctica porque significa que estamos reconstruyendo la historia, usa cherry-pick con sabiduría. Si no sabes lo que estás haciendo ten mucho cuidado</p>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelEncabezado38">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso38" aria-expanded="false" aria-controls="panelColapso38">
+                                38 - Git cherry-pick: traer commits viejos al head de un branch
+                            </button>
+                        </h2>
+                        <div class="accordion-collapse collapse" id="panelColapso38" aria-labelledby="panelEncabezado38" data-bs-parent="#panelAcordion">
+                            <div class="accordion-body">
+                                <p>Existe un mundo alternativo en el cual vamos avanzando en una rama pero necesitamos en master uno de esos avances de la rama, para eso utilizamos el comando <span class="consola">git cherry-pick IDCommit</span>.</p>
+                                <p>cherry-pick es una mala práctica porque significa que estamos reconstruyendo la historia, usa cherry-pick con sabiduría. Si no sabes lo que estás haciendo ten mucho cuidado</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>              
+                </div> 
+            </div>
             <!--cierre seccion capitulo seis-->
 
-                <br>
-            
             <!--inicio seccion capitulo siete-->
-            <h3>Capitulo 7: Comandos de Git para casos de emergencia</h3>
-            <div class="accordion accordion-flush" id="panelAcordion">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="panelEncabezado39">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso39" aria-expanded="false" aria-controls="panelColapso39">
-                            Reconstruir commits en Git con amend
-                        </button>
-                    </h2>
-                    <div class="accordion-collapse collapse" id="panelColapso39" aria-labelledby="panelEncabezado39" data-bs-parent="#panelAcordion">
-                        <div class="accordion-body">
-                            <p>A veces hacemos un commit, pero resulta que no queríamos mandarlo porque faltaba algo más. Utilizamos <span class="consola">git commit --amend</span>, amend en inglés es remendar y lo que hará es que los cambios que hicimos nos los agregará al commit anterior.</p>
+            <div class="marcoCapitulo">
+                <h3 class="mb-3">Capitulo 7: Comandos de Git para casos de emergencia</h3>
+                <div class="accordion accordion-flush" id="panelAcordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelEncabezado39">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso39" aria-expanded="false" aria-controls="panelColapso39">
+                                39 - Reconstruir commits en Git con amend
+                            </button>
+                        </h2>
+                        <div class="accordion-collapse collapse" id="panelColapso39" aria-labelledby="panelEncabezado39" data-bs-parent="#panelAcordion">
+                            <div class="accordion-body">
+                                <p>A veces hacemos un commit, pero resulta que no queríamos mandarlo porque faltaba algo más. Utilizamos <span class="consola">git commit --amend</span>, amend en inglés es remendar y lo que hará es que los cambios que hicimos nos los agregará al commit anterior.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="panelEncabezado40">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso40" aria-expanded="false" aria-controls="panelColapso40">
-                            Git Reset y Reflog: úsese en caso de emergencia
-                        </button>
-                    </h2>
-                    <div class="accordion-collapse collapse" id="panelColapso40" aria-labelledby="panelEncabezado40" data-bs-parent="#panelAcordion">
-                        <div class="accordion-body">
-                            <p>¿Qué pasa cuando todo se rompe y no sabemos qué está pasando? Con git reset HashDelHEAD nos devolveremos al estado en que el proyecto funcionaba.</p>
-                            <p><span class="consola">git reset --soft HashDelHEAD</span> te mantiene lo que tengas en staging ahí.</p>
-                            <p><span class="consola">git reset --hard HashDelHEAD</span> resetea absolutamente todo incluyendo lo que tengas en staging.</p>
-                            <p>git reset es una mala práctica, no deberías usarlo en ningún momento; debe ser nuestro último recurso.</p>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelEncabezado40">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso40" aria-expanded="false" aria-controls="panelColapso40">
+                                40 - Git Reset y Reflog: úsese en caso de emergencia
+                            </button>
+                        </h2>
+                        <div class="accordion-collapse collapse" id="panelColapso40" aria-labelledby="panelEncabezado40" data-bs-parent="#panelAcordion">
+                            <div class="accordion-body">
+                                <p>¿Qué pasa cuando todo se rompe y no sabemos qué está pasando? Con git reset HashDelHEAD nos devolveremos al estado en que el proyecto funcionaba.</p>
+                                <p><span class="consola">git reset --soft HashDelHEAD</span> te mantiene lo que tengas en staging ahí.</p>
+                                <p><span class="consola">git reset --hard HashDelHEAD</span> resetea absolutamente todo incluyendo lo que tengas en staging.</p>
+                                <p>git reset es una mala práctica, no deberías usarlo en ningún momento; debe ser nuestro último recurso.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="panelEncabezado41">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso41" aria-expanded="false" aria-controls="panelColapso41">
-                            Buscar en archivos y commits de Git con Grep y log
-                        </button>
-                    </h2>
-                    <div class="accordion-collapse collapse" id="panelColapso41" aria-labelledby="panelEncabezado41" data-bs-parent="#panelAcordion">
-                        <div class="accordion-body">
-                            <p>A medida que nuestro proyecto se hace grande vamos a querer buscar ciertas cosas.</p>
-                            <p>Por ejemplo: ¿cuántas veces en nuestro proyecto utilizamos la palabra color?</p>
-                            <p>Para buscar utilizamos el comando git grep color y nos buscará en todo el proyecto los archivos en donde está la palabra color.</p>
-                            <ul>
-                                <li>Con <span class="consola">git grep -n color</span> nos saldrá un output el cual nos dirá en qué línea está lo que estamos buscando.</li>
-                                <li>Con <span class="consola">git grep -c color</span> nos saldrá un output el cual nos dirá cuántas veces se repite esa palabra y en qué archivo.</li>
-                                <li>Si queremos buscar cuántas veces utilizamos un atributo de HTML lo hacemos con <span class="consola">git grep -c "p>"</span>.</li>
-                            </ul>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelEncabezado41">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelColapso41" aria-expanded="false" aria-controls="panelColapso41">
+                                41 - Buscar en archivos y commits de Git con Grep y log
+                            </button>
+                        </h2>
+                        <div class="accordion-collapse collapse" id="panelColapso41" aria-labelledby="panelEncabezado41" data-bs-parent="#panelAcordion">
+                            <div class="accordion-body">
+                                <p>A medida que nuestro proyecto se hace grande vamos a querer buscar ciertas cosas.</p>
+                                <p>Por ejemplo: ¿cuántas veces en nuestro proyecto utilizamos la palabra color?</p>
+                                <p>Para buscar utilizamos el comando git grep color y nos buscará en todo el proyecto los archivos en donde está la palabra color.</p>
+                                <ul>
+                                    <li>Con <span class="consola">git grep -n color</span> nos saldrá un output el cual nos dirá en qué línea está lo que estamos buscando.</li>
+                                    <li>Con <span class="consola">git grep -c color</span> nos saldrá un output el cual nos dirá cuántas veces se repite esa palabra y en qué archivo.</li>
+                                    <li>Si queremos buscar cuántas veces utilizamos un atributo de HTML lo hacemos con <span class="consola">git grep -c "p>"</span>.</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>             
+                </div> 
+            </div>
             <!--cierre seccion capitulo siete-->
 
-                <br>
-            
-        </div>
-    </div>
+    </section>
     <!--cierre seccion de resumenes-->
 
-    <br>
-
+    <footer>
+        <div class="container text-center">
+            <p>Platzi - Curso Profesional de Git y GitHub - Octubre 2021</p>
+        </div>
+    </footer>
     
     <!--bootstrap 5-->
     <script src="js/bootstrap.bundle.min.js"></script>

@@ -1,11 +1,30 @@
 body {
-    background-color: skyblue;
+    background-color: lightgray;
+}
+
+.navbar {
+    position: sticky;
+    box-shadow: 0 5px 5px grey;
 }
 
 .hoja-en-blanco {
     background-color: #fff;
     border-radius: 3px;
     margin-top: 30px;
+}
+
+.marcoCapitulo {
+    padding: 16px;
+    margin: 24px;
+    border-radius: 2px;
+    background-color: #fff;
+    color: rgba(0,0,0,0.87);
+    box-shadow: 10px 10px 5px grey;
+/*     box-shadow: 
+    0 2px 2px 0 rgba(0, 0, 0, 0.14), 
+    0 1px 5px 0 rgba(0, 0, 0, 0.12), 
+    0 3px 1px -2px rgba(0, 0, 0, 0.2); */
+    margin-bottom: 10px;
 }
 
 .consola {
@@ -53,4 +72,18 @@ body {
 
 .linea-separacion {
     border-bottom: 1px solid #377ef0;
+}
+
+
+.navbar-collapse {
+    flex-grow: 0;
+}
+
+footer {
+    background-color: #22272d;
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 50px;
+    font-size: 18px;
 }
